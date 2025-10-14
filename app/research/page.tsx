@@ -34,28 +34,41 @@
 import type { Metadata } from "next";
 import ResearchList from "@/components/ResearchList";
 import { siteInfo } from "@/data/site";
+import { BreadcrumbStructuredData } from "@/components/StructuredData";
 
 export const metadata: Metadata = {
   title: "Research",
-  description: `Research papers and publications by ${siteInfo.name}, ${siteInfo.title} at ${siteInfo.institution}.`,
+  description: `Research papers and publications by ${siteInfo.name}, ${siteInfo.title} at ${siteInfo.institution}. Explore working papers and publications in corporate finance, asset pricing, and investor behavior.`,
+  alternates: {
+    canonical: "https://www.patrickblonien.com/research",
+  },
   openGraph: {
-    title: `Research – ${siteInfo.name}`,
+    title: `${siteInfo.name} | Research`,
     description: `Research papers and publications by ${siteInfo.name}`,
+    url: "https://www.patrickblonien.com/research",
   },
 };
 
 export default function ResearchPage() {
-  return (
-    <div className="py-12 sm:py-16">
-      <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
-        <div className="mb-12">
-          <h1 className="text-4xl sm:text-5xl font-bold text-zinc-900 mb-4">
-            Research
-          </h1>
-        </div>
+  const breadcrumbItems = [
+    { name: "Home", url: "https://www.patrickblonien.com" },
+    { name: "Research", url: "https://www.patrickblonien.com/research" },
+  ];
 
-        <ResearchList />
+  return (
+    <>
+      <BreadcrumbStructuredData items={breadcrumbItems} />
+      <div className="py-12 sm:py-16">
+        <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
+          <div className="mb-12">
+            <h1 className="text-4xl sm:text-5xl font-bold text-zinc-900 mb-4">
+              Research
+            </h1>
+          </div>
+
+          <ResearchList />
+        </div>
       </div>
-    </div>
+    </>
   );
 }

@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import { siteInfo } from "@/data/site";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { PersonStructuredData, WebsiteStructuredData } from "@/components/StructuredData";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
@@ -23,22 +24,32 @@ const merriweather = Merriweather({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.patrickblonien.com"),
   title: {
-    default: `${siteInfo.name} – ${siteInfo.title}, ${siteInfo.institution}`,
-    template: `%s – ${siteInfo.name}`,
+    default: "Patrick Blonien | Home",
+    template: "Patrick Blonien | %s",
   },
   description:
     siteInfo.researchFocus ||
     `${siteInfo.name}, ${siteInfo.title} at ${siteInfo.institution}. Research in finance and economics.`,
   keywords: [
+    "Patrick Blonien",
     "finance",
     "economics",
     "research",
     "Carnegie Mellon",
     "Tepper",
     "academic",
+    "corporate finance",
+    "asset pricing",
+    "investor behavior",
+    "finance professor",
+    "financial research",
   ],
   authors: [{ name: siteInfo.name }],
   creator: siteInfo.name,
+  publisher: siteInfo.name,
+  alternates: {
+    canonical: "https://www.patrickblonien.com",
+  },
   icons: {
     icon: [
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
@@ -62,7 +73,7 @@ export const metadata: Metadata = {
         url: siteInfo.portraitUrl || "/portrait.jpg",
         width: 1200,
         height: 630,
-        alt: siteInfo.name,
+        alt: `${siteInfo.name} - ${siteInfo.title}`,
       },
     ],
   },
@@ -75,6 +86,16 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
   },
 };
 
@@ -85,6 +106,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${openSans.variable} ${merriweather.variable}`}>
+      <head>
+        <PersonStructuredData />
+        <WebsiteStructuredData />
+      </head>
       <body className="font-sans flex flex-col min-h-screen">
         <NavBar />
         <main className="flex-1">{children}</main>
