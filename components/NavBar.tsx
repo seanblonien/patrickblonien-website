@@ -1,12 +1,18 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { siteInfo } from "@/data/site";
+import Link from 'next/link';
+import {usePathname} from 'next/navigation';
+import {siteInfo} from '@/data/site';
 
 const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/research", label: "Research" },
+  {
+    href: '/',
+    label: 'Home',
+  },
+  {
+    href: '/research',
+    label: 'Research',
+  },
 ];
 
 export default function NavBar() {
@@ -32,10 +38,10 @@ export default function NavBar() {
                   href={link.href}
                   className={`px-3 py-2 rounded-md text-sm font-medium transition-colors focus-ring ${
                     isActive
-                      ? "bg-primary text-white"
-                      : "text-zinc-700 hover:bg-zinc-100 hover:text-zinc-900"
+                      ? 'bg-primary text-white'
+                      : 'text-zinc-700 hover:bg-zinc-100 hover:text-zinc-900'
                   }`}
-                  aria-current={isActive ? "page" : undefined}
+                  aria-current={isActive ? 'page' : undefined}
                 >
                   {link.label}
                 </Link>
@@ -47,4 +53,3 @@ export default function NavBar() {
     </header>
   );
 }
-

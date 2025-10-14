@@ -1,18 +1,18 @@
-import { Mail, MapPin, GraduationCap, FileText, Linkedin } from "lucide-react";
-import { siteInfo } from "@/data/site";
+import {Mail, MapPin, GraduationCap, FileText, Linkedin} from 'lucide-react';
+import {siteInfo} from '@/data/site';
 
 const socialConfig = {
   scholar: {
     icon: GraduationCap,
-    label: "Google Scholar",
+    label: 'Google Scholar',
   },
   ssrn: {
     icon: FileText,
-    label: "SSRN",
+    label: 'SSRN',
   },
   linkedin: {
     icon: Linkedin,
-    label: "LinkedIn",
+    label: 'LinkedIn',
   },
 } as const;
 
@@ -94,7 +94,11 @@ export default function Footer() {
 
         <div className="mt-8 pt-8 border-t border-zinc-200">
           <p className="text-sm text-zinc-500 text-center">
-            © {new Date().getFullYear()} {siteInfo.name}
+            ©
+            {' '}
+            {new Date().getFullYear()}
+            {' '}
+            {siteInfo.name}
           </p>
         </div>
       </div>

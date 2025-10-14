@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import { useState, useRef, useEffect } from "react";
-import { ChevronDown } from "lucide-react";
+import {ChevronDown} from 'lucide-react';
+import {useEffect, useRef, useState} from 'react';
 
-interface CollapseProps {
+type CollapseProps = {
   title: string;
   children: React.ReactNode;
   defaultOpen?: boolean;
-}
+};
 
 export default function Collapse({
   title,
@@ -37,14 +37,14 @@ export default function Collapse({
     <div className="border border-zinc-200 rounded-md overflow-hidden">
       <button
         onClick={handleToggle}
-        className="w-full flex items-center justify-between px-4 py-3 text-left bg-zinc-50 hover:bg-zinc-100 focus-ring transition-colors"
+        className="w-full flex items-center justify-between px-4 py-3 text-left bg-zinc-50 hover:bg-zinc-100 focus-ring transition-colors cursor-pointer"
         aria-expanded={isOpen}
         aria-controls="collapse-content"
       >
         <span className="font-medium text-sm text-zinc-900">{title}</span>
         <ChevronDown
           className={`w-5 h-5 text-zinc-600 transition-transform duration-200 ${
-            isOpen ? "rotate-180" : ""
+            isOpen ? 'rotate-180' : ''
           }`}
           aria-hidden="true"
         />
@@ -53,7 +53,7 @@ export default function Collapse({
       <div
         id="collapse-content"
         ref={contentRef}
-        style={{ height }}
+        style={{height}}
         className="transition-all duration-300 ease-in-out overflow-hidden"
       >
         <div className="px-4 py-3 text-sm text-zinc-700 leading-relaxed bg-white">
@@ -63,4 +63,3 @@ export default function Collapse({
     </div>
   );
 }
-

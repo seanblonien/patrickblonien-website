@@ -10,19 +10,19 @@
  * - Modify the research focus text in data/site.ts
  */
 
-import type { Metadata } from "next";
-import Hero from "@/components/Hero";
-import { siteInfo } from "@/data/site";
+import type {Metadata} from 'next';
+import Hero from '@/components/Hero';
+import {siteInfo} from '@/data/site';
 
 export const metadata: Metadata = {
   description: `${siteInfo.name}, ${siteInfo.title} at ${siteInfo.institution}. ${siteInfo.researchFocus}`,
   alternates: {
-    canonical: "https://www.patrickblonien.com",
+    canonical: 'https://www.patrickblonien.com',
   },
   openGraph: {
     title: `${siteInfo.name} | Home`,
     description: `${siteInfo.name}, ${siteInfo.title} at ${siteInfo.institution}`,
-    url: "https://www.patrickblonien.com",
+    url: 'https://www.patrickblonien.com',
   },
 };
 

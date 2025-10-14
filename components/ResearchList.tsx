@@ -1,9 +1,9 @@
-import { papers } from "@/data/papers";
-import ResearchCard from "./ResearchCard";
+import {papers} from '@/data/papers';
+import ResearchCard from './ResearchCard';
 
 export default function ResearchList() {
-  const workingPapers = papers.filter((p) => p.paperType === "Working Papers");
-  const publications = papers.filter((p) => p.paperType === "Publications");
+  const workingPapers = papers.filter((p) => p.paperType === 'Working Papers');
+  const publications = papers.filter((p) => p.paperType === 'Publications');
 
   return (
     <div className="space-y-16">

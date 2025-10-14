@@ -1,46 +1,60 @@
-export type LinkType =
-  | "paper"
-  | "slides"
-  | "bibtex"
-  | "presentation"
-  | "media"
-  | "code"
-  | "data"
-  | "external";
+export type LinkType
+  = | 'paper'
+    | 'slides'
+    | 'bibtex'
+    | 'presentation'
+    | 'media'
+    | 'code'
+    | 'data'
+    | 'external';
 
-export interface ResearchLink {
+export type ResearchLink = {
   type: LinkType;
   label?: string;
   url: string;
-}
+};
 
-export type PaperType = "Working Papers" | "Publications";
+export type PaperType = 'Working Papers' | 'Publications';
 
-export interface ResearchPaper {
+export type Presentation = {
+  venue: string;
+  location: string;
+  date?: string;
+};
+
+export type Award = {
+  title: string;
+  year?: string;
+};
+
+export type ResearchPaper = {
   id: string;
   title: string;
   authors: string[];
   paperType: PaperType;
   venue?: string;
-  year?: number;
+  date?: string;
   abstract?: string;
   tags?: string[];
   links?: ResearchLink[];
-}
+  imageUrl?: string;
+  presentations?: Presentation[];
+  awards?: Award[];
+};
 
-export type SocialLinkType = "scholar" | "ssrn" | "linkedin";
+export type SocialLinkType = 'scholar' | 'ssrn' | 'linkedin';
 
-export interface SocialLink {
+export type SocialLink = {
   type: SocialLinkType;
   url: string;
-}
+};
 
-export interface Affiliation {
+export type Affiliation = {
   label: string;
   url: string;
-}
+};
 
-export interface SiteInfo {
+export type SiteInfo = {
   name: string;
   title: string;
   institution: string;
@@ -51,4 +65,4 @@ export interface SiteInfo {
   portraitUrl?: string;
   socials: SocialLink[];
   affiliations: Affiliation[];
-}
+};

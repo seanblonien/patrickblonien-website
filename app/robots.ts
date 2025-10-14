@@ -1,16 +1,16 @@
-import { MetadataRoute } from "next";
+import {MetadataRoute} from 'next';
 
-export const dynamic = "force-static";
+export const dynamic = 'force-static';
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
-        userAgent: "*",
-        allow: "/",
-        disallow: ["/api/", "/_next/"],
+        userAgent: '*',
+        allow: '/',
+        disallow: ['/api/', '/_next/'],
       },
     ],
-    sitemap: "https://www.patrickblonien.com/sitemap.xml",
+    sitemap: 'https://www.patrickblonien.com/sitemap.xml',
   };
 }

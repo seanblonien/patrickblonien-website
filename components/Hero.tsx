@@ -1,7 +1,7 @@
-import Image from "next/image";
-import Link from "next/link";
-import { FileDown, BookOpen } from "lucide-react";
-import { siteInfo } from "@/data/site";
+import Image from 'next/image';
+import Link from 'next/link';
+import {FileDown, BookOpen} from 'lucide-react';
+import {siteInfo} from '@/data/site';
 
 export default function Hero() {
   return (
@@ -66,24 +66,26 @@ export default function Hero() {
 
                 {/* Main image */}
                 <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl ring-4 ring-white">
-                  {siteInfo.portraitUrl ? (
-                    <Image
-                      src={siteInfo.portraitUrl}
-                      alt={`Portrait of ${siteInfo.name}`}
-                      fill
-                      className="object-cover"
-                      priority
-                    />
-                  ) : (
-                    <div className="w-full h-full bg-gradient-to-br from-zinc-200 to-zinc-300 flex items-center justify-center">
-                      <span className="text-6xl font-serif text-zinc-400">
-                        {siteInfo.name
-                          .split(" ")
-                          .map((n) => n[0])
-                          .join("")}
-                      </span>
-                    </div>
-                  )}
+                  {siteInfo.portraitUrl
+                    ? (
+                        <Image
+                          src={siteInfo.portraitUrl}
+                          alt={`Portrait of ${siteInfo.name}`}
+                          fill
+                          className="object-cover"
+                          priority
+                        />
+                      )
+                    : (
+                        <div className="w-full h-full bg-gradient-to-br from-zinc-200 to-zinc-300 flex items-center justify-center">
+                          <span className="text-6xl font-serif text-zinc-400">
+                            {siteInfo.name
+                              .split(' ')
+                              .map((n) => n[0])
+                              .join('')}
+                          </span>
+                        </div>
+                      )}
                 </div>
               </div>
             </div>
