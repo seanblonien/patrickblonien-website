@@ -1,20 +1,23 @@
 /**
  * Research Page
- * 
- * This page displays all research papers with collapsible abstracts and action links.
- * 
+ *
+ * This page displays research papers organized by type (Working Papers and Publications).
+ * Papers are automatically grouped and displayed with section headings and separators.
+ *
  * To add a new paper:
  * 1. Open data/papers.ts
  * 2. Add a new object to the papers array following the ResearchPaper type
- * 3. Required fields: id (unique slug), title, authors (array)
- * 4. Optional fields: venue, year, abstract, tags, links
- * 5. Links can include: paper, slides, bibtex, presentation, media, code, data, external
- * 
+ * 3. Required fields: id (unique slug), title, authors (array), paperType
+ * 4. paperType must be either "Working Papers" or "Publications"
+ * 5. Optional fields: venue, year, abstract, tags, links
+ * 6. Links can include: paper, slides, bibtex, presentation, media, code, data, external
+ *
  * Example:
  * {
  *   id: "my-paper-2025",
  *   title: "My Research Paper Title",
  *   authors: ["Patrick Blonien", "Coauthor Name"],
+ *   paperType: "Working Papers",
  *   venue: "Journal of Finance",
  *   year: 2025,
  *   abstract: "This paper examines...",
@@ -24,7 +27,7 @@
  *     { type: "slides", url: "https://example.com/slides.pdf" },
  *   ]
  * }
- * 
+ *
  * The page will automatically update when you save the file.
  */
 
@@ -49,9 +52,6 @@ export default function ResearchPage() {
           <h1 className="text-4xl sm:text-5xl font-bold text-zinc-900 mb-4">
             Research
           </h1>
-          <p className="text-lg text-zinc-600 max-w-3xl">
-            Working papers and publications in finance and economics.
-          </p>
         </div>
 
         <ResearchList />
@@ -59,4 +59,3 @@ export default function ResearchPage() {
     </div>
   );
 }
-

@@ -14,10 +14,13 @@ export interface ResearchLink {
   url: string;
 }
 
+export type PaperType = "Working Papers" | "Publications";
+
 export interface ResearchPaper {
   id: string;
   title: string;
   authors: string[];
+  paperType: PaperType;
   venue?: string;
   year?: number;
   abstract?: string;
@@ -25,7 +28,7 @@ export interface ResearchPaper {
   links?: ResearchLink[];
 }
 
-export type SocialLinkType = "scholar" | "ssrn" | "twitter" | "linkedin" | "github";
+export type SocialLinkType = "scholar" | "ssrn" | "linkedin";
 
 export interface SocialLink {
   type: SocialLinkType;
@@ -49,4 +52,3 @@ export interface SiteInfo {
   socials: SocialLink[];
   affiliations: Affiliation[];
 }
-

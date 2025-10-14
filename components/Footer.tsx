@@ -1,20 +1,16 @@
-import { Mail, MapPin, GraduationCap, FileText, Twitter, Linkedin } from "lucide-react";
+import { Mail, MapPin, GraduationCap, FileText, Linkedin } from "lucide-react";
 import { siteInfo } from "@/data/site";
 
 const socialIcons = {
   scholar: GraduationCap,
   ssrn: FileText,
-  twitter: Twitter,
   linkedin: Linkedin,
-  github: GraduationCap,
 };
 
 const socialLabels = {
   scholar: "Google Scholar",
   ssrn: "SSRN",
-  twitter: "Twitter/𝕏",
   linkedin: "LinkedIn",
-  github: "GitHub",
 };
 
 export default function Footer() {
@@ -101,4 +97,3 @@ export default function Footer() {
     </footer>
   );
 }
-

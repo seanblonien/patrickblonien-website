@@ -1,10 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
+import { FileDown, BookOpen } from "lucide-react";
 import { siteInfo } from "@/data/site";
 
 export default function Hero() {
   return (
-    <section className="py-16 sm:py-24">
-      <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
+    <section className="py-16 sm:py-24 lg:min-h-[calc(90vh-4rem)] lg:flex lg:items-center">
+      <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="order-2 lg:order-1">
@@ -21,6 +23,29 @@ export default function Hero() {
                 {siteInfo.researchFocus}
               </p>
             )}
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/research"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 focus-ring shadow-md hover:shadow-lg transition-all"
+              >
+                <BookOpen className="w-5 h-5" aria-hidden="true" />
+                View Research
+              </Link>
+
+              {siteInfo.cvUrl && (
+                <a
+                  href={siteInfo.cvUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-zinc-900 border-2 border-zinc-300 rounded-lg font-medium hover:border-primary hover:text-primary focus-ring shadow-md hover:shadow-lg transition-all"
+                >
+                  <FileDown className="w-5 h-5" aria-hidden="true" />
+                  Download CV
+                </a>
+              )}
+            </div>
           </div>
 
           {/* Portrait Image */}
@@ -51,4 +76,3 @@ export default function Hero() {
     </section>
   );
 }
-

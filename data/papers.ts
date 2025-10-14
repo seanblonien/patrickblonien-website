@@ -2,20 +2,22 @@ import type { ResearchPaper } from "./types";
 
 /**
  * Research Papers Data
- * 
+ *
  * To add a new paper:
  * 1. Add a new object to the papers array below
- * 2. Ensure all required fields are filled: id, title, authors
+ * 2. Ensure all required fields are filled: id, title, authors, paperType
  * 3. Optional fields: venue, year, abstract, tags, links
  * 4. The id should be a URL-friendly slug (lowercase, hyphens)
  * 5. Authors should be in order of appearance on the paper
- * 6. Links can include: paper, slides, bibtex, presentation, media, code, data, external
- * 
+ * 6. paperType must be either "Working Papers" or "Publications"
+ * 7. Links can include: paper, slides, bibtex, presentation, media, code, data, external
+ *
  * Example:
  * {
  *   id: "my-new-paper-2025",
  *   title: "The Impact of X on Y: Evidence from Z",
  *   authors: ["Patrick Blonien", "Coauthor Name"],
+ *   paperType: "Working Papers",
  *   venue: "Journal of Finance",
  *   year: 2025,
  *   abstract: "This paper examines...",
@@ -32,6 +34,7 @@ export const papers: ResearchPaper[] = [
     id: "investor-behavior-market-dynamics",
     title: "Investor Behavior and Market Dynamics: A Comprehensive Analysis",
     authors: ["Patrick Blonien", "Jane Doe"],
+    paperType: "Working Papers",
     venue: "Working Paper",
     year: 2025,
     abstract:
@@ -52,6 +55,7 @@ export const papers: ResearchPaper[] = [
     id: "capital-structure-decisions",
     title: "Capital Structure Decisions in the Modern Era",
     authors: ["Patrick Blonien", "John Smith", "Emily Chen"],
+    paperType: "Publications",
     venue: "Review of Financial Studies",
     year: 2024,
     abstract:
@@ -70,6 +74,7 @@ export const papers: ResearchPaper[] = [
     id: "asset-pricing-anomalies",
     title: "Understanding Asset Pricing Anomalies Through the Lens of Behavioral Finance",
     authors: ["Patrick Blonien"],
+    paperType: "Working Papers",
     venue: "R&R at Journal of Financial Economics",
     year: 2024,
     abstract:
@@ -82,4 +87,3 @@ export const papers: ResearchPaper[] = [
     ],
   },
 ] satisfies ResearchPaper[];
-
