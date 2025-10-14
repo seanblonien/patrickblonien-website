@@ -64,8 +64,8 @@ Visit `http://localhost:3000` to see the site.
 │   ├── site.ts             # Site information
 │   └── papers.ts           # Research papers data
 └── public/
-    ├── portrait.jpg        # Hero portrait image
-    └── cv.pdf              # CV download
+    ├── portrait.jpg                        # Hero portrait image
+    └── Patrick Blonien CV June 2025.pdf    # CV download (filename configured in data/site.ts)
 ```
 
 ## Adding Research Papers
@@ -118,10 +118,13 @@ Fonts are configured in `app/layout.tsx`:
 - Body: Open Sans
 - Headings: Merriweather
 
-### Images
+### Images and Files
 
 - Replace `public/portrait.jpg` with your portrait (recommended: 800x800px)
-- Replace `public/cv.pdf` with your CV
+- To update your CV:
+  1. Add the new CV file to the `public/` folder
+  2. Update the `CV_FILENAME` constant in `data/site.ts` with the new filename
+  3. The website will automatically use the new CV
 
 ## Deployment to Vercel
 
@@ -188,4 +191,3 @@ For issues or questions, please open an issue on GitHub or contact the developer
 ---
 
 Built with ❤️ using Next.js and Tailwind CSS
-

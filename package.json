@@ -1,21 +1,29 @@
 {
   "name": "patrickblonien-website",
   "version": "1.0.0",
+  "private": true,
+  "sideEffects": false,
   "description": "Personal academic website for Patrick Blonien",
+  "packageManager": "npm@11.6.2",
+  "engines": {
+    "node": ">=22",
+    "npm": ">=11",
+    "pnpm": "please-use-npm",
+    "yarn": "please-use-npm"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
-  "keywords": [],
-  "author": "Patrick Blonien",
-  "license": "ISC",
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.14",
     "@types/node": "^24.7.2",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
     "autoprefixer": "^10.4.21",
     "lucide-react": "^0.545.0",
     "next": "^15.5.5",
@@ -24,5 +32,11 @@
     "react-dom": "^19.2.0",
     "tailwindcss": "^4.1.14",
     "typescript": "^5.9.3"
-  }
+  },
+  "browserslist": [
+    "Chrome >= 109",
+    "Firefox >= 109",
+    "Safari >= 16.4",
+    "Edge >= 109"
+  ]
 }

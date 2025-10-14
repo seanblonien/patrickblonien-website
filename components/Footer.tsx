@@ -1,17 +1,20 @@
 import { Mail, MapPin, GraduationCap, FileText, Linkedin } from "lucide-react";
 import { siteInfo } from "@/data/site";
 
-const socialIcons = {
-  scholar: GraduationCap,
-  ssrn: FileText,
-  linkedin: Linkedin,
-};
-
-const socialLabels = {
-  scholar: "Google Scholar",
-  ssrn: "SSRN",
-  linkedin: "LinkedIn",
-};
+const socialConfig = {
+  scholar: {
+    icon: GraduationCap,
+    label: "Google Scholar",
+  },
+  ssrn: {
+    icon: FileText,
+    label: "SSRN",
+  },
+  linkedin: {
+    icon: Linkedin,
+    label: "LinkedIn",
+  },
+} as const;
 
 export default function Footer() {
   return (
@@ -40,15 +43,16 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Links Column */}
+          {/* Academic Profiles Column */}
           <div>
             <h3 className="text-sm font-semibold text-zinc-900 uppercase tracking-wider mb-4">
-              Links
+              Academic Profiles
             </h3>
             <ul className="space-y-3 text-sm">
               {siteInfo.socials.map((social) => {
-                const Icon = socialIcons[social.type];
-                const label = socialLabels[social.type];
+                const config = socialConfig[social.type];
+                const Icon = config.icon;
+                const label = config.label;
                 return (
                   <li key={social.type}>
                     <a
@@ -66,10 +70,10 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Affiliations Column */}
+          {/* Institutional Affiliations Column */}
           <div>
             <h3 className="text-sm font-semibold text-zinc-900 uppercase tracking-wider mb-4">
-              Affiliations
+              Institutional Affiliations
             </h3>
             <ul className="space-y-3 text-sm">
               {siteInfo.affiliations.map((affiliation) => (
@@ -90,7 +94,7 @@ export default function Footer() {
 
         <div className="mt-8 pt-8 border-t border-zinc-200">
           <p className="text-sm text-zinc-500 text-center">
-            © {new Date().getFullYear()} {siteInfo.name}. All rights reserved.
+            © {new Date().getFullYear()} {siteInfo.name}
           </p>
         </div>
       </div>

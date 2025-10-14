@@ -8,7 +8,7 @@ export const siteInfo: SiteInfo = {
   address: "5000 Forbes Ave, Pittsburgh, PA 15213, USA",
   researchFocus:
     "My research focuses on corporate finance, asset pricing, and investor behavior, with particular emphasis on understanding how market dynamics influence firm decision-making and capital allocation.",
-  cvUrl: "/cv.pdf",
+  cvUrl: `/Patrick Blonien CV June 2025.pdf`,
   portraitUrl: "/portrait.jpg",
   socials: [
     {

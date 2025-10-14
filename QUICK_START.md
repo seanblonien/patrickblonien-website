@@ -14,7 +14,7 @@ export const siteInfo: SiteInfo = {
   email: "your.email@example.com",            // ✏️ Your email
   address: "Your office address",             // ✏️ Your address
   researchFocus: "Your research focus...",    // ✏️ Your research description
-  cvUrl: "/cv.pdf",                           // ✏️ Path to your CV
+  cvUrl: `/${CV_FILENAME}`,                   // ✏️ Auto-generated from CV_FILENAME constant
   portraitUrl: "/portrait.jpg",               // ✏️ Path to your portrait
   socials: [
     { type: "scholar", url: "YOUR_GOOGLE_SCHOLAR_URL" },
@@ -32,7 +32,7 @@ export const siteInfo: SiteInfo = {
 ### Step 2: Add Your Files (1 minute)
 
 1. Add your portrait image: `public/portrait.jpg` (800x800px recommended)
-2. Add your CV: `public/cv.pdf`
+2. Add your CV to the `public/` folder and update `CV_FILENAME` in `data/site.ts`
 
 ### Step 3: Add Your Papers (2 minutes)
 
@@ -126,6 +126,15 @@ vercel
 
 Edit `data/site.ts` and change the `email` and `address` fields.
 
+### Update Your CV
+
+1. Add the new CV file to the `public/` folder
+2. Edit `data/site.ts` and update the `CV_FILENAME` constant:
+   ```typescript
+   export const CV_FILENAME = "Your Name CV Month Year.pdf";
+   ```
+3. The website will automatically use the new CV
+
 ### Change Colors
 
 Edit `app/globals.css`:
@@ -176,7 +185,7 @@ npm run build
 
 - [ ] Updated `data/site.ts` with your information
 - [ ] Added `public/portrait.jpg`
-- [ ] Added `public/cv.pdf`
+- [ ] Added your CV to `public/` and updated `CV_FILENAME` in `data/site.ts`
 - [ ] Updated `data/papers.ts` with your papers
 - [ ] Tested locally with `npm run dev`
 - [ ] Built successfully with `npm run build`
@@ -187,4 +196,3 @@ npm run build
 ---
 
 **That's it! Your academic website is live! 🎉**
-

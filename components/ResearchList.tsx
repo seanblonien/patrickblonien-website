@@ -6,14 +6,16 @@ export default function ResearchList() {
   const publications = papers.filter((p) => p.paperType === "Publications");
 
   return (
-    <div className="space-y-12">
+    <div className="space-y-16">
       {workingPapers.length > 0 && (
         <section>
-          <h2 className="text-3xl font-bold text-zinc-900 mb-6">
-            Working Papers
-          </h2>
-          <hr className="border-zinc-300 mb-8" />
-          <div className="space-y-6">
+          <div className="mb-8">
+            <h2 className="text-3xl font-serif font-bold text-zinc-900 mb-2">
+              Working Papers
+            </h2>
+            <div className="h-1 w-20 bg-gradient-to-r from-primary to-primary/50 rounded-full"></div>
+          </div>
+          <div className="space-y-8">
             {workingPapers.map((paper) => (
               <ResearchCard key={paper.id} paper={paper} />
             ))}
@@ -23,11 +25,13 @@ export default function ResearchList() {
 
       {publications.length > 0 && (
         <section>
-          <h2 className="text-3xl font-bold text-zinc-900 mb-6">
-            Publications
-          </h2>
-          <hr className="border-zinc-300 mb-8" />
-          <div className="space-y-6">
+          <div className="mb-8">
+            <h2 className="text-3xl font-serif font-bold text-zinc-900 mb-2">
+              Publications
+            </h2>
+            <div className="h-1 w-20 bg-gradient-to-r from-primary to-primary/50 rounded-full"></div>
+          </div>
+          <div className="space-y-8">
             {publications.map((paper) => (
               <ResearchCard key={paper.id} paper={paper} />
             ))}
