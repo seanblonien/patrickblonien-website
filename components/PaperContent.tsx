@@ -79,7 +79,7 @@ export default function PaperContent({paper}: PaperContentProps) {
 
       {paper.abstract && (
         <div className="mb-4">
-          <Collapse title="Abstract">
+          <Collapse title="Abstract" defaultOpen>
             <p>{paper.abstract}</p>
           </Collapse>
         </div>
