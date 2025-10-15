@@ -1,0 +1,3 @@
+- When committing and pushing code, always run `npm run validate` first to ensure no linting or type errors
+- Do not create new documentation, only do so when instructed to or when it is obviously valuable
+- Keep as much data related to the site info and research papers contained inside the `./data` directory so that it can easily be configured in one place
