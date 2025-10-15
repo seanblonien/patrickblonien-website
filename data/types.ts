@@ -20,6 +20,7 @@ export type Presentation = {
   venue: string;
   location: string;
   date?: string;
+  isPresentedByCoauthor?: boolean;
 };
 
 export type Award = {
@@ -27,10 +28,23 @@ export type Award = {
   year?: string;
 };
 
+export type PatrickAuthor = {
+  name: string;
+  isPatrick: true;
+};
+
+export type ExternalAuthor = {
+  name: string;
+  url: string;
+  isPatrick?: never;
+};
+
+export type Author = PatrickAuthor | ExternalAuthor;
+
 export type ResearchPaper = {
   id: string;
   title: string;
-  authors: string[];
+  authors: Author[];
   paperType: PaperType;
   venue?: string;
   date?: string;

@@ -63,6 +63,7 @@ export default tseslint.config(
       '@stylistic/lines-between-class-members': ['error', 'always', {
         exceptAfterSingleLine: true,
       }],
+      '@stylistic/padded-blocks': ['error', 'never'],
       // Custom TypeScript rules
       '@typescript-eslint/no-unused-vars': [
         'error',

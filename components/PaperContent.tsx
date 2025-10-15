@@ -1,9 +1,47 @@
-import type {ResearchPaper} from '@/data/types';
+import type {Author, ResearchPaper} from '@/data/types';
 import Collapse from './Collapse';
 
 type PaperContentProps = {
   paper: ResearchPaper;
 };
+
+type AuthorListProps = {
+  authors: Author[];
+};
+
+function AuthorList({authors}: AuthorListProps) {
+  return (
+    <p className="text-sm text-zinc-600 mb-2">
+      {authors.map((author, index) => {
+        const isLast = index === authors.length - 1;
+        const separator = isLast ? '' : ', ';
+
+        if (author.isPatrick) {
+          return (
+            <span key={index}>
+              <span className="font-semibold">{author.name}</span>
+              {separator}
+            </span>
+          );
+        }
+
+        return (
+          <span key={index}>
+            <a
+              href={author.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary transition-colors"
+            >
+              {author.name}
+            </a>
+            {separator}
+          </span>
+        );
+      })}
+    </p>
+  );
+}
 
 export default function PaperContent({paper}: PaperContentProps) {
   return (
@@ -12,9 +50,7 @@ export default function PaperContent({paper}: PaperContentProps) {
         {paper.title}
       </h3>
 
-      <p className="text-sm text-zinc-600 mb-2">
-        {paper.authors.join(', ')}
-      </p>
+      <AuthorList authors={paper.authors} />
 
       {(paper.venue || paper.date) && (
         <p className="text-sm text-zinc-500 mb-4">

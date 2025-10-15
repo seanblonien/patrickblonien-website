@@ -16,7 +16,10 @@ import type {ResearchPaper} from './types';
  * {
  *   id: "my-new-paper-2025",
  *   title: "The Impact of X on Y: Evidence from Z",
- *   authors: ["Patrick Blonien", "Coauthor Name"],
+ *   authors: [
+ *     { name: "Patrick Blonien", isPatrick: true },
+ *     { name: "Coauthor Name", url: "https://example.com/coauthor" }
+ *   ],
  *   paperType: "Working Papers",
  *   venue: "Journal of Finance",
  *   year: 2025,
@@ -33,7 +36,7 @@ export const papers: ResearchPaper[] = [
   {
     id: 'size-discovery-slow-markets',
     title: 'Size Discovery in Slow Markets',
-    authors: ['Patrick Blonien'],
+    authors: [{name: 'Patrick Blonien', isPatrick: true}],
     paperType: 'Working Papers',
     date: 'January 13, 2024',
     abstract:
@@ -51,62 +54,50 @@ export const papers: ResearchPaper[] = [
       {
         venue: 'Finance Theory Webinar',
         location: 'Virtual',
-
       },
       {
         venue: 'Carnegie Mellon University',
         location: 'Pittsburgh, PA',
-
       },
       {
         venue: 'Boston College',
         location: 'Chestnut Hill, MA',
-
       },
       {
         venue: 'University of Notre Dame',
         location: 'Notre Dame, IN',
-
       },
       {
         venue: 'University of Washington',
         location: 'Seattle, WA',
-
       },
       {
         venue: 'University of Colorado Boulder',
         location: 'Boulder, CO',
-
       },
       {
         venue: 'University of Maryland',
         location: 'College Park, MD',
-
       },
       {
         venue: 'University of Texas at Dallas',
         location: 'Richardson, TX',
-
       },
       {
         venue: 'NFA (2023)',
         location: 'Calgary, AB',
-
       },
       {
         venue: 'WFA (2023)',
         location: 'San Francisco, CA',
-
       },
       {
         venue: 'Finance Theory Group Summer School',
         location: 'Virtual',
-
       },
       {
         venue: 'Rice University',
         location: 'Houston, TX',
-
       },
     ],
     awards: [
@@ -122,9 +113,59 @@ export const papers: ResearchPaper[] = [
     ],
   },
   {
+    id: 'quality-of-advice-shareholder-voting',
+    title: 'The Quality of Advice in Shareholder Voting',
+    authors: [
+      {name: 'Patrick Blonien', isPatrick: true},
+      {name: 'Alan Crane', url: 'https://www.alancrane.com/'},
+      {name: 'Kevin Crotty', url: 'https://kevin-crotty.com/'},
+      {name: 'David De Angelis', url: 'https://www.de-angelis.com/'},
+    ],
+    paperType: 'Working Papers',
+    abstract:
+      'How does the quality and influence of advice relate to voting mistakes?  Estimates of latent proposal quality imply advisor ISS\'s recommendations are wrong half the time for shareholder proposals, while management\'s error rate is only 15%.  The direction of proxy advice and whether it agrees with management conveys information about ISS\'s precision, so shareholders make fewer mistakes than either proxy advisors or management.  Most mutual funds\' votes are more informative than ISS recommendations.  Vanguard\'s votes are a better benchmark for proposal quality than either ISS or even management recommendations. Our analysis implies limiting ISS\'s influence would improve voting outcomes.',
+    imageUrl: '/advice_in_shareholder_voting.png',
+    date: 'February 21, 2025',
+    links: [
+      {
+        type: 'external',
+        label: 'SSRN',
+        url: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3945818',
+      },
+    ],
+    presentations: [
+      {
+        venue: 'Securities and Exchange Commission (DERA)',
+        location: 'Washington, DC',
+      },
+      {
+        venue: 'AFA (2022)',
+        location: 'Virtual',
+        isPresentedByCoauthor: true,
+      },
+      {
+        venue: 'FMA (2021)',
+        location: 'Denver, CO',
+      },
+      {
+        venue: 'Australian National University',
+        location: 'Canberra, ACT',
+        isPresentedByCoauthor: true,
+      },
+      {
+        venue: 'Rice University',
+        location: 'Houston, TX',
+      },
+
+    ],
+  },
+  {
     id: 'investor-behavior-market-dynamics',
     title: 'Investor Behavior and Market Dynamics: A Comprehensive Analysis',
-    authors: ['Patrick Blonien', 'Jane Doe'],
+    authors: [
+      {name: 'Patrick Blonien', isPatrick: true},
+      {name: 'Jane Doe', url: 'https://example.com/jane-doe'},
+    ],
     paperType: 'Working Papers',
     venue: 'Working Paper',
     date: '2025',
@@ -154,7 +195,11 @@ export const papers: ResearchPaper[] = [
   {
     id: 'capital-structure-decisions',
     title: 'Capital Structure Decisions in the Modern Era',
-    authors: ['Patrick Blonien', 'John Smith', 'Emily Chen'],
+    authors: [
+      {name: 'Patrick Blonien', isPatrick: true},
+      {name: 'John Smith', url: 'https://example.com/john-smith'},
+      {name: 'Emily Chen', url: 'https://example.com/emily-chen'},
+    ],
     paperType: 'Publications',
     venue: 'Review of Financial Studies',
     date: '2024',
@@ -176,7 +221,7 @@ export const papers: ResearchPaper[] = [
   {
     id: 'asset-pricing-anomalies',
     title: 'Understanding Asset Pricing Anomalies Through the Lens of Behavioral Finance',
-    authors: ['Patrick Blonien'],
+    authors: [{name: 'Patrick Blonien', isPatrick: true}],
     paperType: 'Working Papers',
     venue: 'R&R at Journal of Financial Economics',
     date: '2024',
