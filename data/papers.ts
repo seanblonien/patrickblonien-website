@@ -142,6 +142,7 @@ export const papers: ResearchPaper[] = [
         url: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3945818',
       },
     ],
+    tags: ['Revise & Resubmit at the Review of Financial Studies'],
     presentations: [
       {
         venue: 'Securities and Exchange Commission (DERA)',
