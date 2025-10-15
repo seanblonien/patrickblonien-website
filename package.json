@@ -54,10 +54,16 @@
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.41.0"
   },
-  "browserslist": [
-    "Chrome >= 109",
-    "Firefox >= 109",
-    "Safari >= 16.4",
-    "Edge >= 109"
-  ]
+  "browserslist": {
+    "production": [
+      "defaults and supports es6-module",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }

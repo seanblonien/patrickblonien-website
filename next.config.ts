@@ -15,6 +15,15 @@ const nextConfig: NextConfig = withBundleAnalyzer({
     removeConsole: process.env.NODE_ENV === 'production',
   },
   poweredByHeader: false,
+  reactStrictMode: true,
+  // Optional: Optimize package imports for better tree-shaking
+  experimental: {
+    optimizePackageImports: [
+      'lucide-react',
+      '@vercel/analytics',
+      '@vercel/speed-insights',
+    ],
+  },
 });
 
 export default nextConfig;

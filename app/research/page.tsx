@@ -34,6 +34,7 @@
 import ResearchList from '@/components/ResearchList';
 import {BreadcrumbStructuredData} from '@/components/StructuredData';
 import {siteInfo} from '@/data/site';
+import cmuTartan from '@/public/cmu_tartan.webp';
 import type {Metadata} from 'next';
 import Image from 'next/image';
 
@@ -69,12 +70,13 @@ export default function ResearchPage() {
       {/* Full-width banner with overlaid title */}
       <div className="relative w-full h-32 sm:h-40 md:h-48">
         <Image
-          src="/cmu_tartan.webp"
+          src={cmuTartan}
           alt="CMU Tartan Pattern"
           fill
           className="object-cover object-center"
           style={{minWidth: '100%', minHeight: '100%'}}
           priority
+          fetchPriority="high"
         />
         {/* Overlaid title positioned at bottom left */}
         <div className="absolute bottom-0 left-0 right-0">

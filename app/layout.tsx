@@ -9,16 +9,19 @@ import {Merriweather, Open_Sans} from 'next/font/google';
 import './globals.css';
 
 const openSans = Open_Sans({
+  weight: ['400', '700'],
   subsets: ['latin'],
   variable: '--font-open-sans',
   display: 'swap',
+  preload: true,
 });
 
 const merriweather = Merriweather({
-  weight: ['300', '400', '700', '900'],
+  weight: ['400', '700'],
   subsets: ['latin'],
   variable: '--font-merriweather',
   display: 'swap',
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -29,7 +32,7 @@ export const metadata: Metadata = {
   },
   description:
     siteInfo.researchFocus
-    || `${siteInfo.name}, ${siteInfo.title} at ${siteInfo.institution}. Research in finance and economics.`,
+    || `${siteInfo.name}, ${siteInfo.title} at ${siteInfo.institution}. My primary research area is financial market design. I am also interested in using structural models to estimate economically important latent variables.`,
   keywords: [
     'Patrick Blonien',
     'finance',
