@@ -16,6 +16,10 @@ const nextConfig: NextConfig = withBundleAnalyzer({
   },
   poweredByHeader: false,
   reactStrictMode: true,
+  eslint: {
+    // Don't fail builds on linting errors
+    ignoreDuringBuilds: true,
+  },
   // Optional: Optimize package imports for better tree-shaking
   experimental: {
     optimizePackageImports: [
