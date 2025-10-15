@@ -6,12 +6,17 @@ import IconLink from './IconLink';
 
 type PaperLinksProps = {
   paper: ResearchPaper;
-  onPresentationsClick: () => void;
-  onAwardsClick: () => void;
-  onMediaClick: () => void;
+  onPresentationsClickAction: () => void;
+  onAwardsClickAction: () => void;
+  onMediaClickAction: () => void;
 };
 
-export default function PaperLinks({paper, onPresentationsClick, onAwardsClick, onMediaClick}: PaperLinksProps) {
+export default function PaperLinks({
+  paper,
+  onPresentationsClickAction,
+  onAwardsClickAction,
+  onMediaClickAction,
+}: PaperLinksProps) {
   const hasLinks = paper.links && paper.links.length > 0;
   const hasPresentations = paper.presentations && paper.presentations.length > 0;
   const hasAwards = paper.awards && paper.awards.length > 0;
@@ -35,7 +40,7 @@ export default function PaperLinks({paper, onPresentationsClick, onAwardsClick, 
 
       {hasMedia && (
         <button
-          onClick={onMediaClick}
+          onClick={onMediaClickAction}
           className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm text-zinc-700 bg-white border border-zinc-300 rounded-md hover:border-primary hover:text-primary hover:bg-zinc-50 focus-ring transition-all cursor-pointer"
           aria-label="View media"
         >
@@ -46,7 +51,7 @@ export default function PaperLinks({paper, onPresentationsClick, onAwardsClick, 
 
       {hasPresentations && (
         <button
-          onClick={onPresentationsClick}
+          onClick={onPresentationsClickAction}
           className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm text-zinc-700 bg-white border border-zinc-300 rounded-md hover:border-primary hover:text-primary hover:bg-zinc-50 focus-ring transition-all cursor-pointer"
           aria-label="View presentations"
         >
@@ -57,7 +62,7 @@ export default function PaperLinks({paper, onPresentationsClick, onAwardsClick, 
 
       {hasAwards && (
         <button
-          onClick={onAwardsClick}
+          onClick={onAwardsClickAction}
           className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm text-zinc-700 bg-white border border-zinc-300 rounded-md hover:border-primary hover:text-primary hover:bg-zinc-50 focus-ring transition-all cursor-pointer"
           aria-label="View awards"
         >

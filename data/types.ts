@@ -8,10 +8,12 @@ export type LinkType
     | 'data'
     | 'external';
 
+export type UrlType = `https://${string}`;
+
 export type ResearchLink = {
   type: LinkType;
   label?: string;
-  url: string;
+  url: UrlType;
 };
 
 export type PaperType = 'Working Papers' | 'Publications';
@@ -20,7 +22,7 @@ export type Presentation = {
   venue: string;
   location: string;
   date?: string;
-  isPresentedByCoauthor?: boolean;
+  isPresentedByCoauthor?: true;
 };
 
 export type Award = {
@@ -30,7 +32,7 @@ export type Award = {
 
 export type MediaLink = {
   label: string;
-  url: string;
+  url: UrlType;
 };
 
 export type PatrickAuthor = {
@@ -40,7 +42,7 @@ export type PatrickAuthor = {
 
 export type ExternalAuthor = {
   name: string;
-  url: string;
+  url: UrlType;
   isPatrick?: never;
 };
 
@@ -66,13 +68,15 @@ export type SocialLinkType = 'scholar' | 'ssrn' | 'linkedin';
 
 export type SocialLink = {
   type: SocialLinkType;
-  url: string;
+  url: UrlType;
 };
 
 export type Affiliation = {
   label: string;
-  url: string;
+  url: UrlType;
 };
+
+export type PublicUrlPath = `/${string}`;
 
 export type SiteInfo = {
   name: string;
@@ -81,8 +85,8 @@ export type SiteInfo = {
   email: string;
   address: string;
   researchFocus?: string;
-  cvUrl?: string;
-  portraitUrl?: string;
+  cvUrl?: PublicUrlPath;
+  portraitUrl?: PublicUrlPath;
   socials: SocialLink[];
   affiliations: Affiliation[];
 };

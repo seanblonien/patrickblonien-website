@@ -197,7 +197,6 @@ export const papers: ResearchPaper[] = [
       {
         venue: 'World Symposium on Investment Research',
         location: 'Toronto, ON',
-        isPresentedByCoauthor: false,
       },
       {
         venue: 'University of Pittsburgh',
@@ -217,7 +216,6 @@ export const papers: ResearchPaper[] = [
       {
         venue: 'University of Kentucky',
         location: 'Lexington, KY',
-        isPresentedByCoauthor: false,
       },
       {
         venue: 'Rice University',
@@ -232,7 +230,6 @@ export const papers: ResearchPaper[] = [
       {
         venue: 'Rice Breakfast Club',
         location: 'Houston, TX',
-        isPresentedByCoauthor: false,
       },
     ],
   },
@@ -282,7 +279,7 @@ export const papers: ResearchPaper[] = [
       {
         venue: 'Northern Finance Association',
         location: 'Toronto, ON (Canada)',
-        isPresentedByCoauthor: false,
+
       },
       {
         venue: 'Financial Management Association',
@@ -292,22 +289,58 @@ export const papers: ResearchPaper[] = [
       {
         venue: 'Finance Theory Group Summer School',
         location: 'New York, NY',
-        isPresentedByCoauthor: false,
+
       },
       {
         venue: 'World Federation of Exchanges Webinar',
         location: 'Virtual / Online',
-        isPresentedByCoauthor: false,
+
       },
       {
         venue: 'Carnegie Mellon University',
         location: 'Pittsburgh, PA',
-        isPresentedByCoauthor: false,
+
       },
       {
         venue: 'Rice University',
         location: 'Houston, TX',
-        isPresentedByCoauthor: false,
+
+      },
+    ],
+  },
+  {
+    id: 'congressional-stock-trading',
+    title: 'Should the Public be Concerned about Congressional Stock Trading?',
+    authors: [
+      {name: 'Patrick Blonien', isPatrick: true},
+      {name: 'Alan Crane', url: 'https://www.alancrane.com/'},
+      {name: 'Kevin Crotty', url: 'https://kevin-crotty.com/'},
+    ],
+    paperType: 'Working Papers',
+    abstract:
+      'We study whether trades made by members of Congress outperform by combining survey-elicited beliefs with a hierarchical Bayesian model of abnormal returns. While prior literature finds little evidence of average outperformance, we show that profitable trading does occur but is infrequent and concentrated during key periods. Survey respondents believe two-thirds of members trade on private information, with expected profits of 36% per informed trade. Our model estimates that the vast majority of traders occasionally make profitable trades, but such trades are quite rare. We find no evidence that conflicted trades are more profitable, contrary to such trades\' media scrutiny. Consistent with proposed policy changes, trades in funds are less likely to be informed than single-stock trades.',
+    imageUrl: '/congressional_stock_trading.png',
+    links: [
+      {
+        type: 'external',
+        label: 'SSRN',
+        url: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5524863',
+      },
+    ],
+    presentations: [
+      {
+        venue: 'Georgetown Politics in Finance Conference',
+        location: 'Washington, DC',
+      },
+      {
+        venue: 'University of Rochester',
+        location: 'Rochester, NY',
+        isPresentedByCoauthor: true,
+      },
+      {
+        venue: 'The University of Arizona',
+        location: 'Tucson, AZ',
+        isPresentedByCoauthor: true,
       },
     ],
   },

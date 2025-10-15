@@ -15,8 +15,12 @@
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build --turbo",
+    "prod": "next build && next start",
+    "analyze": "ANALYZE=true next build",
     "start": "next start",
-    "lint": "eslint --fix ."
+    "lint": "eslint --fix .",
+    "typecheck": "tsc --noEmit",
+    "validate": "concurrently -g -c auto npm:lint npm:typecheck"
   },
   "dependencies": {
     "@vercel/analytics": "^1.5.0",
@@ -30,7 +34,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.34.0",
-    "@next/bundle-analyzer": "^15.5.2",
+    "@next/bundle-analyzer": "^15.5.5",
     "@next/eslint-plugin-next": "^15.5.2",
     "@stylistic/eslint-plugin": "^5.2.3",
     "@tailwindcss/postcss": "^4.1.14",
@@ -39,6 +43,7 @@
     "@types/react-dom": "^19.2.2",
     "@typescript-eslint/eslint-plugin": "^8.41.0",
     "@typescript-eslint/parser": "^8.41.0",
+    "concurrently": "^9.2.1",
     "eslint": "^9.34.0",
     "eslint-config-next": "15.3.5",
     "eslint-plugin-react": "^7.37.5",

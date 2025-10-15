@@ -55,6 +55,7 @@ export default function Collapse({
         ref={contentRef}
         style={{height}}
         className="transition-all duration-300 ease-in-out overflow-hidden"
+        aria-hidden={!isOpen}
       >
         <div className="px-4 py-3 text-sm text-zinc-700 leading-relaxed bg-white">
           {children}

@@ -1,5 +1,6 @@
 import type {Author, ResearchPaper} from '@/data/types';
 import Collapse from './Collapse';
+import {ScholarlyArticleStructuredData} from './StructuredData';
 
 type PaperContentProps = {
   paper: ResearchPaper;
@@ -46,6 +47,9 @@ function AuthorList({authors}: AuthorListProps) {
 export default function PaperContent({paper}: PaperContentProps) {
   return (
     <>
+      {/* Structured data for SEO - makes abstract discoverable by search engines */}
+      {paper.abstract && <ScholarlyArticleStructuredData paper={paper} />}
+
       <h3 className="text-xl font-serif font-semibold text-zinc-900 mb-3 leading-tight">
         {paper.title}
       </h3>

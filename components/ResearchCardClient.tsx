@@ -30,9 +30,9 @@ export default function ResearchCardClient({paper, children}: ResearchCardClient
 
             <PaperLinks
               paper={paper}
-              onPresentationsClick={() => setIsPresentationsModalOpen(true)}
-              onAwardsClick={() => setIsAwardsModalOpen(true)}
-              onMediaClick={() => setIsMediaModalOpen(true)}
+              onPresentationsClickAction={() => setIsPresentationsModalOpen(true)}
+              onAwardsClickAction={() => setIsAwardsModalOpen(true)}
+              onMediaClickAction={() => setIsMediaModalOpen(true)}
             />
           </div>
         </div>

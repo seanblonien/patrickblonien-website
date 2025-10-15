@@ -88,3 +88,44 @@ export function BreadcrumbStructuredData({items}: {
     />
   );
 }
+
+export function ScholarlyArticleStructuredData({paper}: {
+  paper: {
+    title: string;
+    abstract?: string;
+    authors: {name: string; url?: string}[];
+    venue?: string;
+    date?: string;
+    pdfUrl?: string;
+    doi?: string;
+  };
+}) {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'ScholarlyArticle',
+    'headline': paper.title,
+    'abstract': paper.abstract,
+    'author': paper.authors.map((author) => ({
+      '@type': 'Person',
+      'name': author.name,
+      'url': author.url,
+    })),
+    'publisher': paper.venue
+      ? {
+          '@type': 'Organization',
+          'name': paper.venue,
+        }
+      : undefined,
+    'datePublished': paper.date,
+    'url': paper.pdfUrl,
+    'identifier': paper.doi,
+    'inLanguage': 'en-US',
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{__html: JSON.stringify(structuredData)}}
+    />
+  );
+}
