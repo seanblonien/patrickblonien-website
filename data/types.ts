@@ -28,6 +28,11 @@ export type Award = {
   year?: string;
 };
 
+export type MediaLink = {
+  label: string;
+  url: string;
+};
+
 export type PatrickAuthor = {
   name: string;
   isPatrick: true;
@@ -54,6 +59,7 @@ export type ResearchPaper = {
   imageUrl?: string;
   presentations?: Presentation[];
   awards?: Award[];
+  media?: MediaLink[];
 };
 
 export type SocialLinkType = 'scholar' | 'ssrn' | 'linkedin';

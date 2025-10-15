@@ -41,7 +41,7 @@ export const papers: ResearchPaper[] = [
     date: 'January 13, 2024',
     abstract:
       'Adding a size-discovery trading protocol, where a break in the limit order book occurs to match orders at a fixed price, can increase allocative efficiency in markets with slow trading frequency. A high trading frequency spreads liquidity, resulting in a strong incentive to wait for a size-discovery session. This incentive to delay trade is smaller in slower markets, and its negative effect on efficiency can be offset in slower markets by the positive effect of size discovery. This result rationalizes the empirical fact that size-discovery protocols only exist in slower markets. Potential conflicts of interest between traders and platform operators are identified but seem unlikely to drive the existence of size-discovery trading protocols.',
-    tags: ['Job Market Paper', 'market microstructure', 'trading protocols'],
+    tags: ['Job Market Paper'],
     imageUrl: '/size_discovery.png',
     links: [
       {
@@ -237,86 +237,77 @@ export const papers: ResearchPaper[] = [
     ],
   },
   {
-    id: 'investor-behavior-market-dynamics',
-    title: 'Investor Behavior and Market Dynamics: A Comprehensive Analysis',
+    id: 'is-24-7-trading-better',
+    title: 'Is 24/7 Trading Better?',
     authors: [
       {name: 'Patrick Blonien', isPatrick: true},
-      {name: 'Jane Doe', url: 'https://example.com/jane-doe'},
+      {name: 'Alexander Ober', url: 'https://www.alexander-ober.com/'},
     ],
     paperType: 'Working Papers',
-    venue: 'Working Paper',
-    date: '2025',
     abstract:
-      'This paper examines the relationship between investor behavior and market dynamics in modern financial markets. Using a comprehensive dataset spanning multiple asset classes, we document significant patterns in how individual and institutional investors respond to market signals. Our findings suggest that behavioral biases play a crucial role in price formation and market efficiency. We develop a theoretical framework that incorporates these insights and test its predictions using high-frequency trading data. The results have important implications for asset pricing models and market microstructure theory.',
-    tags: ['corporate finance', 'asset pricing', 'investor behavior'],
+      'In a dynamic model of large traders who manage inventory risk, we show that a daily market closure coordinates liquidity. Some length of closure is welfare-improving relative to 24/7 trade, as the coordination of liquidity improves allocative efficiency, fully offsetting the costs of the closure. A long closure is optimal for traders in small markets, while traders in large markets would benefit from extending trading hours to near 24/7. A calibration of our model to several large equity exchanges that have proposed extending trading hours suggests that implementing such proposals would benefit traders.',
+    imageUrl: '/is_24-7_trading_better.png',
     links: [
-      {
-        type: 'paper',
-        url: 'https://example.com/paper.pdf',
-      },
-      {
-        type: 'slides',
-        url: 'https://example.com/slides.pdf',
-      },
-      {
-        type: 'bibtex',
-        url: 'https://example.com/cite.bib',
-      },
       {
         type: 'external',
         label: 'SSRN',
-        url: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=EXAMPLE',
+        url: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4942934',
       },
     ],
-  },
-  {
-    id: 'capital-structure-decisions',
-    title: 'Capital Structure Decisions in the Modern Era',
-    authors: [
-      {name: 'Patrick Blonien', isPatrick: true},
-      {name: 'John Smith', url: 'https://example.com/john-smith'},
-      {name: 'Emily Chen', url: 'https://example.com/emily-chen'},
-    ],
-    paperType: 'Publications',
-    venue: 'Review of Financial Studies',
-    date: '2024',
-    abstract:
-      'We investigate how firms make capital structure decisions in an environment characterized by low interest rates and increased regulatory scrutiny. Our analysis reveals that traditional trade-off theory predictions hold, but with important modifications related to financial flexibility and market timing considerations.',
-    tags: ['corporate finance', 'capital structure'],
-    links: [
+    media: [
       {
-        type: 'paper',
-        url: 'https://example.com/paper2.pdf',
+        label: 'Columbia Law School Blue Sky Blog',
+        url: 'https://clsbluesky.law.columbia.edu/2024/10/17/is-24-7-trading-better/',
       },
       {
-        type: 'external',
-        label: 'Publisher',
-        url: 'https://academic.oup.com/rfs/example',
+        label: 'Comment to the SEC on 24X National Exchange LLC',
+        url: 'https://www.sec.gov/comments/10-242/10242-524675-1505242.pdf',
+      },
+      {
+        label: 'Markets Media',
+        url: 'https://www.marketsmedia.com/is-24-7-trading-inevitable/',
       },
     ],
-  },
-  {
-    id: 'asset-pricing-anomalies',
-    title: 'Understanding Asset Pricing Anomalies Through the Lens of Behavioral Finance',
-    authors: [{name: 'Patrick Blonien', isPatrick: true}],
-    paperType: 'Working Papers',
-    venue: 'R&R at Journal of Financial Economics',
-    date: '2024',
-    abstract:
-      'This study provides a unified framework for understanding various asset pricing anomalies documented in the literature. By incorporating insights from behavioral finance, we show that many seemingly disparate anomalies can be explained by a common set of investor biases and market frictions.',
-    tags: ['asset pricing', 'behavioral finance'],
-    links: [
+    presentations: [
       {
-        type: 'paper',
-        url: 'https://example.com/paper3.pdf',
+        venue: 'Financial Research Association',
+        location: 'Las Vegas, NV',
+        isPresentedByCoauthor: true,
       },
       {
-        type: 'slides',
-        url: 'https://example.com/slides3.pdf',
+        venue: 'The Microstructure Exchange',
+        location: 'Virtual / Online',
+        isPresentedByCoauthor: true,
       },
       {
-        type: 'code',
-        url: 'https://github.com/example/code',
+        venue: 'Northern Finance Association',
+        location: 'Toronto, ON (Canada)',
+        isPresentedByCoauthor: false,
+      },
+      {
+        venue: 'Financial Management Association',
+        location: 'Chicago, IL',
+        isPresentedByCoauthor: true,
+      },
+      {
+        venue: 'Finance Theory Group Summer School',
+        location: 'New York, NY',
+        isPresentedByCoauthor: false,
+      },
+      {
+        venue: 'World Federation of Exchanges Webinar',
+        location: 'Virtual / Online',
+        isPresentedByCoauthor: false,
+      },
+      {
+        venue: 'Carnegie Mellon University',
+        location: 'Pittsburgh, PA',
+        isPresentedByCoauthor: false,
+      },
+      {
+        venue: 'Rice University',
+        location: 'Houston, TX',
+        isPresentedByCoauthor: false,
       },
     ],
   },

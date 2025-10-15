@@ -3,6 +3,7 @@
 import type {ResearchPaper} from '@/data/types';
 import {useState} from 'react';
 import AwardsModalContent from './AwardsModalContent';
+import MediaModalContent from './MediaModalContent';
 import Modal from './Modal';
 import PaperContent from './PaperContent';
 import PaperLinks from './PaperLinks';
@@ -16,6 +17,7 @@ type ResearchCardClientProps = {
 export default function ResearchCardClient({paper, children}: ResearchCardClientProps) {
   const [isPresentationsModalOpen, setIsPresentationsModalOpen] = useState(false);
   const [isAwardsModalOpen, setIsAwardsModalOpen] = useState(false);
+  const [isMediaModalOpen, setIsMediaModalOpen] = useState(false);
 
   return (
     <>
@@ -30,6 +32,7 @@ export default function ResearchCardClient({paper, children}: ResearchCardClient
               paper={paper}
               onPresentationsClick={() => setIsPresentationsModalOpen(true)}
               onAwardsClick={() => setIsAwardsModalOpen(true)}
+              onMediaClick={() => setIsMediaModalOpen(true)}
             />
           </div>
         </div>
@@ -49,6 +52,14 @@ export default function ResearchCardClient({paper, children}: ResearchCardClient
         title="Awards"
       >
         <AwardsModalContent awards={paper.awards} />
+      </Modal>
+
+      <Modal
+        isOpen={isMediaModalOpen}
+        onClose={() => setIsMediaModalOpen(false)}
+        title="Media"
+      >
+        <MediaModalContent media={paper.media} />
       </Modal>
     </>
   );

@@ -1,20 +1,22 @@
 'use client';
 
 import type {ResearchPaper} from '@/data/types';
-import {Award as AwardIcon, Presentation as PresentationIcon} from 'lucide-react';
+import {Award as AwardIcon, Newspaper, Presentation as PresentationIcon} from 'lucide-react';
 import IconLink from './IconLink';
 
 type PaperLinksProps = {
   paper: ResearchPaper;
   onPresentationsClick: () => void;
   onAwardsClick: () => void;
+  onMediaClick: () => void;
 };
 
-export default function PaperLinks({paper, onPresentationsClick, onAwardsClick}: PaperLinksProps) {
+export default function PaperLinks({paper, onPresentationsClick, onAwardsClick, onMediaClick}: PaperLinksProps) {
   const hasLinks = paper.links && paper.links.length > 0;
   const hasPresentations = paper.presentations && paper.presentations.length > 0;
   const hasAwards = paper.awards && paper.awards.length > 0;
-  const shouldRenderSection = hasLinks || hasPresentations || hasAwards;
+  const hasMedia = paper.media && paper.media.length > 0;
+  const shouldRenderSection = hasLinks || hasPresentations || hasAwards || hasMedia;
 
   if (!shouldRenderSection) {
     return null;
@@ -30,6 +32,17 @@ export default function PaperLinks({paper, onPresentationsClick, onAwardsClick}:
           url={link.url}
         />
       ))}
+
+      {hasMedia && (
+        <button
+          onClick={onMediaClick}
+          className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm text-zinc-700 bg-white border border-zinc-300 rounded-md hover:border-primary hover:text-primary hover:bg-zinc-50 focus-ring transition-all cursor-pointer"
+          aria-label="View media"
+        >
+          <Newspaper className="w-4 h-4" aria-hidden="true" />
+          <span>Media</span>
+        </button>
+      )}
 
       {hasPresentations && (
         <button
