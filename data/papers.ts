@@ -1,3 +1,8 @@
+import adviceInShareholderVotingImg from '@/public/advice_in_shareholder_voting.webp';
+import congressionalStockTradingImg from '@/public/congressional_stock_trading.webp';
+import detectingTransformedTradeImg from '@/public/detecting_transformed_trade.webp';
+import is247TradingBetterImg from '@/public/is_24-7_trading_better.webp';
+import sizeDiscoveryImg from '@/public/size_discovery.webp';
 import type {ResearchPaper} from './types';
 
 /**
@@ -6,13 +11,16 @@ import type {ResearchPaper} from './types';
  * To add a new paper:
  * 1. Add a new object to the papers array below
  * 2. Ensure all required fields are filled: id, title, authors, paperType
- * 3. Optional fields: venue, year, abstract, tags, links
+ * 3. Optional fields: venue, year, abstract, tags, links, imageUrl
  * 4. The id should be a URL-friendly slug (lowercase, hyphens)
  * 5. Authors should be in order of appearance on the paper
  * 6. paperType must be either "Working Papers" or "Publications"
  * 7. Links can include: paper, slides, bibtex, presentation, media, code, data, external
+ * 8. For imageUrl, import the image at the top of this file and reference it directly
  *
  * Example:
+ * import myPaperImg from '@/public/my-paper-image.webp';
+ *
  * {
  *   id: "my-new-paper-2025",
  *   title: "The Impact of X on Y: Evidence from Z",
@@ -25,6 +33,7 @@ import type {ResearchPaper} from './types';
  *   year: 2025,
  *   abstract: "This paper examines...",
  *   tags: ["corporate finance", "asset pricing"],
+ *   imageUrl: myPaperImg,
  *   links: [
  *     { type: "paper", url: "https://example.com/paper.pdf" },
  *     { type: "slides", url: "https://example.com/slides.pdf" },
@@ -42,7 +51,7 @@ export const papers: ResearchPaper[] = [
     abstract:
       'Adding a size-discovery trading protocol, where a break in the limit order book occurs to match orders at a fixed price, can increase allocative efficiency in markets with slow trading frequency. A high trading frequency spreads liquidity, resulting in a strong incentive to wait for a size-discovery session. This incentive to delay trade is smaller in slower markets, and its negative effect on efficiency can be offset in slower markets by the positive effect of size discovery. This result rationalizes the empirical fact that size-discovery protocols only exist in slower markets. Potential conflicts of interest between traders and platform operators are identified but seem unlikely to drive the existence of size-discovery trading protocols.',
     tags: ['Job Market Paper'],
-    imageUrl: '/size_discovery.png',
+    imageUrl: sizeDiscoveryImg,
     links: [
       {
         type: 'external',
@@ -124,7 +133,7 @@ export const papers: ResearchPaper[] = [
     paperType: 'Working Papers',
     abstract:
       'How does the quality and influence of advice relate to voting mistakes?  Estimates of latent proposal quality imply advisor ISS\'s recommendations are wrong half the time for shareholder proposals, while management\'s error rate is only 15%.  The direction of proxy advice and whether it agrees with management conveys information about ISS\'s precision, so shareholders make fewer mistakes than either proxy advisors or management.  Most mutual funds\' votes are more informative than ISS recommendations.  Vanguard\'s votes are a better benchmark for proposal quality than either ISS or even management recommendations. Our analysis implies limiting ISS\'s influence would improve voting outcomes.',
-    imageUrl: '/advice_in_shareholder_voting.png',
+    imageUrl: adviceInShareholderVotingImg,
     date: 'February 21, 2025',
     links: [
       {
@@ -170,7 +179,7 @@ export const papers: ResearchPaper[] = [
     paperType: 'Working Papers',
     abstract:
       'We introduce a two-dimensional mixture model that leverages the cross-section of insiders\' buy and sell histories to infer which insiders make informed buys, informed sells, both, or neither.  The method classifies all insiders, and insiders unclassified by leading alternative approaches exhibit a substantial propensity to use information.  Out-of-sample returns are higher for stocks traded by insiders identified as more likely to use information.  The model for insiders informs a person-specific mixture distribution that is used to classify whether any disclosed trade is informed. Whether trades are prescheduled, option-related, or by inside blockholders significantly relates to the probability they are informed.',
-    imageUrl: '/detecting_transformed_trade.png',
+    imageUrl: detectingTransformedTradeImg,
     links: [
       {
         type: 'external',
@@ -243,7 +252,7 @@ export const papers: ResearchPaper[] = [
     paperType: 'Working Papers',
     abstract:
       'In a dynamic model of large traders who manage inventory risk, we show that a daily market closure coordinates liquidity. Some length of closure is welfare-improving relative to 24/7 trade, as the coordination of liquidity improves allocative efficiency, fully offsetting the costs of the closure. A long closure is optimal for traders in small markets, while traders in large markets would benefit from extending trading hours to near 24/7. A calibration of our model to several large equity exchanges that have proposed extending trading hours suggests that implementing such proposals would benefit traders.',
-    imageUrl: '/is_24-7_trading_better.png',
+    imageUrl: is247TradingBetterImg,
     links: [
       {
         type: 'external',
@@ -319,7 +328,7 @@ export const papers: ResearchPaper[] = [
     paperType: 'Working Papers',
     abstract:
       'We study whether trades made by members of Congress outperform by combining survey-elicited beliefs with a hierarchical Bayesian model of abnormal returns. While prior literature finds little evidence of average outperformance, we show that profitable trading does occur but is infrequent and concentrated during key periods. Survey respondents believe two-thirds of members trade on private information, with expected profits of 36% per informed trade. Our model estimates that the vast majority of traders occasionally make profitable trades, but such trades are quite rare. We find no evidence that conflicted trades are more profitable, contrary to such trades\' media scrutiny. Consistent with proposed policy changes, trades in funds are less likely to be informed than single-stock trades.',
-    imageUrl: '/congressional_stock_trading.png',
+    imageUrl: congressionalStockTradingImg,
     links: [
       {
         type: 'external',

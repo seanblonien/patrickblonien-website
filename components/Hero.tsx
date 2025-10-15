@@ -1,7 +1,7 @@
+import {siteInfo} from '@/data/site';
+import {BookOpen, FileDown} from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import {FileDown, BookOpen} from 'lucide-react';
-import {siteInfo} from '@/data/site';
 
 export default function Hero() {
   return (
@@ -16,9 +16,9 @@ export default function Hero() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-zinc-900 mb-6 leading-tight">
               {siteInfo.name}
             </h1>
-            <p className="text-xl sm:text-2xl text-primary-700 font-medium mb-3">
+            <h2 className="text-xl sm:text-2xl text-primary-700 font-medium mb-3">
               {siteInfo.title}
-            </p>
+            </h2>
             <p className="text-lg text-zinc-600 mb-8">{siteInfo.institution}</p>
 
             {siteInfo.researchFocus && (

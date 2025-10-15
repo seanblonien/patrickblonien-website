@@ -6,13 +6,13 @@
  *
  * To update content:
  * - Edit data/site.ts to change personal information
- * - Update the portrait image in public/portrait.jpg
+ * - Update the portrait image in public/portrait.webp
  * - Modify the research focus text in data/site.ts
  */
 
-import type {Metadata} from 'next';
 import Hero from '@/components/Hero';
 import {siteInfo} from '@/data/site';
+import type {Metadata} from 'next';
 
 export const metadata: Metadata = {
   description: `${siteInfo.name}, ${siteInfo.title} at ${siteInfo.institution}. ${siteInfo.researchFocus}`,

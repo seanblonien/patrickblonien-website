@@ -1,3 +1,5 @@
+import type {StaticImageData} from 'next/image';
+
 export type LinkType
   = | 'paper'
     | 'slides'
@@ -58,7 +60,7 @@ export type ResearchPaper = {
   abstract?: string;
   tags?: string[];
   links?: ResearchLink[];
-  imageUrl?: string;
+  imageUrl?: StaticImageData;
   presentations?: Presentation[];
   awards?: Award[];
   media?: MediaLink[];
@@ -86,7 +88,7 @@ export type SiteInfo = {
   address: string;
   researchFocus?: string;
   cvUrl?: PublicUrlPath;
-  portraitUrl?: PublicUrlPath;
+  portraitUrl: PublicUrlPath;
   socials: SocialLink[];
   affiliations: Affiliation[];
 };

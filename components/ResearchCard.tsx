@@ -1,6 +1,6 @@
 import type {ResearchPaper} from '@/data/types';
 import {FileText} from 'lucide-react';
-import Image from 'next/image';
+import Image, {type StaticImageData} from 'next/image';
 import ResearchCardClient from './ResearchCardClient';
 
 type ResearchCardProps = {
@@ -8,7 +8,7 @@ type ResearchCardProps = {
 };
 
 type PaperImageProps = {
-  imageUrl?: string;
+  imageUrl?: StaticImageData;
   title: string;
   gradient: string;
 };
@@ -24,8 +24,6 @@ function PaperImage({imageUrl, title, gradient}: PaperImageProps) {
         <Image
           src={imageUrl}
           alt={title}
-          width={400}
-          height={300}
           className="w-full h-auto object-contain"
         />
       </div>

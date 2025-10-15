@@ -9,7 +9,7 @@ export const siteInfo: SiteInfo = {
   researchFocus:
     'My research focuses on corporate finance, asset pricing, and investor behavior, with particular emphasis on understanding how market dynamics influence firm decision-making and capital allocation.',
   cvUrl: `/Patrick Blonien CV June 2025.pdf`,
-  portraitUrl: '/portrait.jpg',
+  portraitUrl: '/portrait.webp',
   socials: [
     {
       type: 'ssrn',

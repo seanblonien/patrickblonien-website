@@ -1,12 +1,12 @@
-import type {Metadata} from 'next';
-import {Open_Sans, Merriweather} from 'next/font/google';
-import './globals.css';
-import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
+import NavBar from '@/components/NavBar';
+import {PersonStructuredData, WebsiteStructuredData} from '@/components/StructuredData';
 import {siteInfo} from '@/data/site';
 import {Analytics} from '@vercel/analytics/next';
 import {SpeedInsights} from '@vercel/speed-insights/next';
-import {PersonStructuredData, WebsiteStructuredData} from '@/components/StructuredData';
+import type {Metadata} from 'next';
+import {Merriweather, Open_Sans} from 'next/font/google';
+import './globals.css';
 
 const openSans = Open_Sans({
   subsets: ['latin'],
@@ -85,7 +85,7 @@ export const metadata: Metadata = {
     description: siteInfo.researchFocus || `${siteInfo.title} at ${siteInfo.institution}`,
     images: [
       {
-        url: siteInfo.portraitUrl || '/portrait.jpg',
+        url: siteInfo.portraitUrl,
         width: 1200,
         height: 630,
         alt: `${siteInfo.name} - ${siteInfo.title}`,
@@ -96,7 +96,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: `${siteInfo.name} – ${siteInfo.title}`,
     description: siteInfo.researchFocus || `${siteInfo.title} at ${siteInfo.institution}`,
-    images: [siteInfo.portraitUrl || '/portrait.jpg'],
+    images: [siteInfo.portraitUrl],
   },
   robots: {
     index: true,
