@@ -160,6 +160,83 @@ export const papers: ResearchPaper[] = [
     ],
   },
   {
+    id: 'detecting-informed-trade-corporate-insiders',
+    title: 'Detecting Informed Trade by Corporate Insiders',
+    authors: [
+      {name: 'Patrick Blonien', isPatrick: true},
+      {name: 'Alan Crane', url: 'https://www.alancrane.com/'},
+      {name: 'Kevin Crotty', url: 'https://kevin-crotty.com/'},
+    ],
+    paperType: 'Working Papers',
+    abstract:
+      'We introduce a two-dimensional mixture model that leverages the cross-section of insiders\' buy and sell histories to infer which insiders make informed buys, informed sells, both, or neither.  The method classifies all insiders, and insiders unclassified by leading alternative approaches exhibit a substantial propensity to use information.  Out-of-sample returns are higher for stocks traded by insiders identified as more likely to use information.  The model for insiders informs a person-specific mixture distribution that is used to classify whether any disclosed trade is informed. Whether trades are prescheduled, option-related, or by inside blockholders significantly relates to the probability they are informed.',
+    imageUrl: '/detecting_transformed_trade.png',
+    links: [
+      {
+        type: 'external',
+        label: 'SSRN',
+        url: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4633070',
+      },
+    ],
+    presentations: [
+      {
+        venue: '5th Conference on Financial Economics and Accounting',
+        location: 'New Brunswick, NJ',
+        isPresentedByCoauthor: true,
+      },
+      {
+        venue: 'Northern Finance Association',
+        location: 'Various (typically Canada)',
+        isPresentedByCoauthor: true,
+      },
+      {
+        venue: 'University of Virginia',
+        location: 'Charlottesville, VA',
+        isPresentedByCoauthor: true,
+      },
+      {
+        venue: 'World Symposium on Investment Research',
+        location: 'Toronto, ON',
+        isPresentedByCoauthor: false,
+      },
+      {
+        venue: 'University of Pittsburgh',
+        location: 'Pittsburgh, PA',
+        isPresentedByCoauthor: true,
+      },
+      {
+        venue: 'Carnegie Mellon University',
+        location: 'Pittsburgh, PA',
+        isPresentedByCoauthor: true,
+      },
+      {
+        venue: 'Louisiana State University',
+        location: 'Baton Rouge, LA',
+        isPresentedByCoauthor: true,
+      },
+      {
+        venue: 'University of Kentucky',
+        location: 'Lexington, KY',
+        isPresentedByCoauthor: false,
+      },
+      {
+        venue: 'Rice University',
+        location: 'Houston, TX',
+        isPresentedByCoauthor: true,
+      },
+      {
+        venue: 'University of North Texas',
+        location: 'Denton, TX',
+        isPresentedByCoauthor: true,
+      },
+      {
+        venue: 'Rice Breakfast Club',
+        location: 'Houston, TX',
+        isPresentedByCoauthor: false,
+      },
+    ],
+  },
+  {
     id: 'investor-behavior-market-dynamics',
     title: 'Investor Behavior and Market Dynamics: A Comprehensive Analysis',
     authors: [

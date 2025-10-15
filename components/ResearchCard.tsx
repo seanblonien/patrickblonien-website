@@ -14,7 +14,7 @@ type PaperImageProps = {
 };
 
 function PaperImage({imageUrl, title, gradient}: PaperImageProps) {
-  const baseClasses = 'flex-shrink-0 w-full sm:w-1/3 flex items-center justify-center';
+  const baseClasses = 'flex-shrink-0 w-full sm:w-1/3 flex items-center justify-center pl-2 py-4';
   const gradientClasses = imageUrl ? '' : `h-48 sm:h-auto bg-gradient-to-br ${gradient}`;
   const containerClasses = `${baseClasses} ${gradientClasses}`;
 
