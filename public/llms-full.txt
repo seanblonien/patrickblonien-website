@@ -1,6 +1,6 @@
 # Patrick Blonien
 
-Academic website for Patrick Blonien, Assistant Professor of Finance at Carnegie Mellon University, Tepper School of Business.
+> Academic website for Patrick Blonien, Assistant Professor of Finance at Carnegie Mellon University, Tepper School of Business.
 
 ## About
 

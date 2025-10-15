@@ -14,7 +14,7 @@
   },
   "scripts": {
     "dev": "next dev --turbo",
-    "prebuild": "bun run scripts/generate-llms-txt.ts && bun run scripts/generate-llms-txt.ts --full",
+    "prebuild": "bun run generate",
     "build": "next build --turbo",
     "prod": "next build && serve out",
     "analyze": "ANALYZE=true next build",
@@ -22,6 +22,7 @@
     "lint": "eslint --fix .",
     "typecheck": "tsc --noEmit",
     "validate": "concurrently -g -c auto npm:lint npm:typecheck",
+    "generate": "concurrently -g -c auto npm:generate:llms npm:generate:llms-full",
     "generate:llms": "bun run scripts/generate-llms-txt.ts",
     "generate:llms-full": "bun run scripts/generate-llms-txt.ts --full"
   },

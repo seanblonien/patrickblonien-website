@@ -73,7 +73,7 @@ const lastUpdated = new Date().toISOString().split('T')[0];
 // Intro line
 let content = `# ${siteInfo.name}
 
-Academic website for ${siteInfo.name}, ${siteInfo.title} at ${siteInfo.institution}.
+> Academic website for ${siteInfo.name}, ${siteInfo.title} at ${siteInfo.institution}.
 
 ## About
 
