@@ -7,7 +7,7 @@ export const siteInfo: SiteInfo = {
   email: 'pblonien@andrew.cmu.edu',
   address: '5000 Forbes Ave, Pittsburgh, PA 15213, USA',
   researchFocus:
-    'My research focuses on corporate finance, asset pricing, and investor behavior, with particular emphasis on understanding how market dynamics influence firm decision-making and capital allocation.',
+    'My primary research interests lie in financial market design and the role of information in financial markets. I use dynamic models to evaluate the efficiency of different market structures and trading mechanisms. I am also interested in applying structural models to estimate the information content embedded in trades and recommendations. Prior to joining Carnegie Mellon University, I completed a Ph.D. in Finance at Rice University and hold a bachelor’s degree from Baylor University.',
   cvUrl: `/Patrick Blonien CV June 2025.pdf`,
   portraitUrl: '/portrait.webp',
   socials: [
@@ -30,8 +30,12 @@ export const siteInfo: SiteInfo = {
       url: 'https://www.cmu.edu/tepper/',
     },
     {
-      label: 'Faculty Directory',
+      label: 'Faculty Page',
       url: 'https://scholars.cmu.edu/26562-patrick-blonien',
+    },
+    {
+      label: 'Finance Theory Group',
+      url: 'https://www.financetheory.org/members/patrick-blonien',
     },
   ],
 } as const;

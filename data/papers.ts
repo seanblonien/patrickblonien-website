@@ -314,6 +314,11 @@ export const papers: ResearchPaper[] = [
 
       },
     ],
+    awards: [
+      {
+        title: 'FMA Annual Meeting Best Paper Award Semifinalist, FMA 2024',
+      },
+    ],
   },
   {
     id: 'congressional-stock-trading',
