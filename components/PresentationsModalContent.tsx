@@ -21,7 +21,7 @@ export default function PresentationsModalContent({presentations}: Presentations
             {presentation.isPresentedByCoauthor
               ? (
                   <sup
-                    className="text-zinc-500 align-top ml-1 text-xs -translate-y-0.5"
+                    className="text-zinc-500 align-top ml-1 text-xs -translate-y-1 pt-0.5"
                     title="Presented by Coauthor"
                     aria-label="Presented by Coauthor"
                     style={{lineHeight: 1}}
