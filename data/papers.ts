@@ -47,10 +47,8 @@ export const papers: ResearchPaper[] = [
     title: 'Size Discovery in Slow Markets',
     authors: [{name: 'Patrick Blonien', isPatrick: true}],
     paperType: 'Working Papers',
-    date: 'January 13, 2024',
     abstract:
       'Adding a size-discovery trading protocol, where a break in the limit order book occurs to match orders at a fixed price, can increase allocative efficiency in markets with slow trading frequency. A high trading frequency spreads liquidity, resulting in a strong incentive to wait for a size-discovery session. This incentive to delay trade is smaller in slower markets, and its negative effect on efficiency can be offset in slower markets by the positive effect of size discovery. This result rationalizes the empirical fact that size-discovery protocols only exist in slower markets. Potential conflicts of interest between traders and platform operators are identified but seem unlikely to drive the existence of size-discovery trading protocols.',
-    tags: ['Job Market Paper'],
     imageUrl: sizeDiscoveryImg,
     links: [
       {
@@ -93,16 +91,16 @@ export const papers: ResearchPaper[] = [
         location: 'Richardson, TX',
       },
       {
-        venue: 'NFA (2023)',
-        location: 'Calgary, AB',
+        venue: 'Northern Finance Association (2023)',
+        location: 'Toronto, ON',
       },
       {
-        venue: 'WFA (2023)',
+        venue: 'Western Finance Association (2023)',
         location: 'San Francisco, CA',
       },
       {
         venue: 'Finance Theory Group Summer School',
-        location: 'Virtual',
+        location: 'Seattle, WA',
       },
       {
         venue: 'Rice University',
@@ -134,7 +132,6 @@ export const papers: ResearchPaper[] = [
     abstract:
       'How does the quality and influence of advice relate to voting mistakes?  Estimates of latent proposal quality imply advisor ISS\'s recommendations are wrong half the time for shareholder proposals, while management\'s error rate is only 15%.  The direction of proxy advice and whether it agrees with management conveys information about ISS\'s precision, so shareholders make fewer mistakes than either proxy advisors or management.  Most mutual funds\' votes are more informative than ISS recommendations.  Vanguard\'s votes are a better benchmark for proposal quality than either ISS or even management recommendations. Our analysis implies limiting ISS\'s influence would improve voting outcomes.',
     imageUrl: adviceInShareholderVotingImg,
-    date: 'February 21, 2025',
     links: [
       {
         type: 'external',
@@ -142,24 +139,25 @@ export const papers: ResearchPaper[] = [
         url: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3945818',
       },
     ],
-    tags: ['Revise & Resubmit at the Review of Financial Studies'],
+    tags: ['Revise & Resubmit at The Review of Financial Studies'],
     presentations: [
       {
         venue: 'Securities and Exchange Commission (DERA)',
-        location: 'Washington, DC',
-      },
-      {
-        venue: 'AFA (2022)',
         location: 'Virtual',
         isPresentedByCoauthor: true,
       },
       {
-        venue: 'FMA (2021)',
+        venue: 'American Finance Association (2022)',
+        location: 'Virtual',
+        isPresentedByCoauthor: true,
+      },
+      {
+        venue: 'Financial Managament Association (2021)',
         location: 'Denver, CO',
       },
       {
         venue: 'Australian National University',
-        location: 'Canberra, ACT',
+        location: 'Virtual',
         isPresentedByCoauthor: true,
       },
       {
@@ -191,12 +189,12 @@ export const papers: ResearchPaper[] = [
     presentations: [
       {
         venue: '5th Conference on Financial Economics and Accounting',
-        location: 'New Brunswick, NJ',
+        location: 'East Lansing, MI',
         isPresentedByCoauthor: true,
       },
       {
         venue: 'Northern Finance Association',
-        location: 'Various (typically Canada)',
+        location: 'Calgary, AB',
         isPresentedByCoauthor: true,
       },
       {
@@ -279,17 +277,16 @@ export const papers: ResearchPaper[] = [
       {
         venue: 'Financial Research Association',
         location: 'Las Vegas, NV',
-        isPresentedByCoauthor: true,
       },
       {
         venue: 'The Microstructure Exchange',
-        location: 'Virtual / Online',
+        location: 'Virtual',
         isPresentedByCoauthor: true,
       },
       {
         venue: 'Northern Finance Association',
-        location: 'Toronto, ON (Canada)',
-
+        location: 'Calgary, ON',
+        isPresentedByCoauthor: true,
       },
       {
         venue: 'Financial Management Association',
@@ -303,7 +300,7 @@ export const papers: ResearchPaper[] = [
       },
       {
         venue: 'World Federation of Exchanges Webinar',
-        location: 'Virtual / Online',
+        location: 'Virtual',
 
       },
       {
