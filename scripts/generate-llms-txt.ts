@@ -67,7 +67,7 @@ function formatDateISO(dateStr: string | undefined): string | null {
 }
 
 // Build the llms.txt content
-const baseUrl = 'https://www.patrickblonien.com';
+const baseUrl = 'https://patrickblonien.com';
 const lastUpdated = new Date().toISOString().split('T')[0];
 
 // Intro line

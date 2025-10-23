@@ -19,7 +19,7 @@ export function PersonStructuredData() {
       },
     },
     'email': siteInfo.email,
-    'url': 'https://www.patrickblonien.com',
+    'url': 'https://patrickblonien.com',
     'image': siteInfo.portraitUrl,
     'sameAs': siteInfo.socials
       .map((social) => social.url)
@@ -47,7 +47,7 @@ export function WebsiteStructuredData() {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     'name': `${siteInfo.name} - Academic Website`,
-    'url': 'https://www.patrickblonien.com',
+    'url': 'https://patrickblonien.com',
     'description': `Academic website of ${siteInfo.name}, ${siteInfo.title} at ${siteInfo.institution}`,
     'author': {
       '@type': 'Person',

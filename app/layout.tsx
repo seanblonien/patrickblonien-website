@@ -25,10 +25,10 @@ const merriweather = Merriweather({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.patrickblonien.com'),
+  metadataBase: new URL('https://patrickblonien.com'),
   title: {
-    default: 'Patrick Blonien | Home',
-    template: 'Patrick Blonien | %s',
+    default: `${siteInfo.name} | Home`,
+    template: `${siteInfo.name} | %s`,
   },
   description:
     siteInfo.researchFocus
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   creator: siteInfo.name,
   publisher: siteInfo.name,
   alternates: {
-    canonical: 'https://www.patrickblonien.com',
+    canonical: 'https://patrickblonien.com',
   },
   icons: {
     icon: [
@@ -82,10 +82,10 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://www.patrickblonien.com',
+    url: 'https://patrickblonien.com',
     siteName: siteInfo.name,
-    title: `${siteInfo.name} – ${siteInfo.title}`,
-    description: siteInfo.researchFocus || `${siteInfo.title} at ${siteInfo.institution}`,
+    title: `${siteInfo.name} | Home`,
+    description: `${siteInfo.name}, ${siteInfo.title} at ${siteInfo.institution}`,
     images: [
       {
         url: siteInfo.portraitUrl,
@@ -97,8 +97,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${siteInfo.name} – ${siteInfo.title}`,
-    description: siteInfo.researchFocus || `${siteInfo.title} at ${siteInfo.institution}`,
+    title: `${siteInfo.name} | Home`,
+    description: `${siteInfo.name}, ${siteInfo.title} at ${siteInfo.institution}`,
     images: [siteInfo.portraitUrl],
   },
   robots: {

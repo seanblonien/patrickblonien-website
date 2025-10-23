@@ -41,25 +41,17 @@ import Image from 'next/image';
 export const metadata: Metadata = {
   title: 'Research',
   description: `Research papers and publications by ${siteInfo.name}, ${siteInfo.title} at ${siteInfo.institution}. Explore working papers and publications in corporate finance, asset pricing, and investor behavior.`,
-  alternates: {
-    canonical: 'https://www.patrickblonien.com/research',
-  },
-  openGraph: {
-    title: `${siteInfo.name} | Research`,
-    description: `Research papers and publications by ${siteInfo.name}`,
-    url: 'https://www.patrickblonien.com/research',
-  },
 };
 
 export default function ResearchPage() {
   const breadcrumbItems = [
     {
       name: 'Home',
-      url: 'https://www.patrickblonien.com',
+      url: 'https://patrickblonien.com',
     },
     {
       name: 'Research',
-      url: 'https://www.patrickblonien.com/research',
+      url: 'https://patrickblonien.com/research',
     },
   ];
 

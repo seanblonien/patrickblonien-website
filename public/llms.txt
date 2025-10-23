@@ -4,19 +4,20 @@
 
 ## About
 
-My research focuses on corporate finance, asset pricing, and investor behavior, with particular emphasis on understanding how market dynamics influence firm decision-making and capital allocation.
+My primary research interests lie in financial market design and the role of information in financial markets. I use dynamic models to evaluate the efficiency of different market structures and trading mechanisms. I am also interested in applying structural models to estimate the information content embedded in trades and recommendations. Prior to joining Carnegie Mellon University, I completed a Ph.D. in Finance at Rice University and hold a bachelor’s degree from Baylor University.
 
 ## Links
 
 - SSRN: https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=3595563
 - Google Scholar: https://scholar.google.com/citations?user=wy8eu34AAAAJ&hl=en&oi=ao
 - LinkedIn: https://www.linkedin.com/in/patrick-blonien-52b3b8b0/
-- CV: https://www.patrickblonien.com/Patrick%20Blonien%20CV%20June%202025.pdf
+- CV: https://patrickblonien.com/Patrick%20Blonien%20CV%20June%202025.pdf
 
 ## Affiliations
 
 - CMU Tepper School of Business: https://www.cmu.edu/tepper/
-- Faculty Directory: https://scholars.cmu.edu/26562-patrick-blonien
+- Faculty Page: https://scholars.cmu.edu/26562-patrick-blonien
+- Finance Theory Group: https://www.financetheory.org/members/patrick-blonien
 
 ## Research
 
@@ -25,8 +26,6 @@ My research focuses on corporate finance, asset pricing, and investor behavior, 
 ### Size Discovery in Slow Markets
 
 **Authors:** Patrick Blonien
-**Published:** 2024-01-13
-**Tags:** Job Market Paper
 
 **Links:**
 - SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4484749
@@ -35,7 +34,7 @@ My research focuses on corporate finance, asset pricing, and investor behavior, 
 ### The Quality of Advice in Shareholder Voting
 
 **Authors:** Patrick Blonien, Alan Crane, Kevin Crotty, David De Angelis
-**Published:** 2025-02-21
+**Tags:** Revise & Resubmit at The Review of Financial Studies
 
 **Links:**
 - SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3945818
@@ -77,9 +76,9 @@ My research focuses on corporate finance, asset pricing, and investor behavior, 
 
 ## Site Metadata
 
-- Website: https://www.patrickblonien.com
-- Sitemap: https://www.patrickblonien.com/sitemap.xml
-- Last updated: 2025-10-15
+- Website: https://patrickblonien.com
+- Sitemap: https://patrickblonien.com/sitemap.xml
+- Last updated: 2025-10-23
 
 ## Citations
 
@@ -88,5 +87,5 @@ sources. Full citation information is available on each paper's SSRN page.
 
 ---
 
-Generated: 2025-10-15
+Generated: 2025-10-23
 Version: Concise (see llms-full.txt for complete details)

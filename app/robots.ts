@@ -11,6 +11,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/_next/'],
       },
     ],
-    sitemap: 'https://www.patrickblonien.com/sitemap.xml',
+    sitemap: 'https://patrickblonien.com/sitemap.xml',
   };
 }

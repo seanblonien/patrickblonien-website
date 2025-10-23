@@ -4,19 +4,20 @@
 
 ## About
 
-My research focuses on corporate finance, asset pricing, and investor behavior, with particular emphasis on understanding how market dynamics influence firm decision-making and capital allocation.
+My primary research interests lie in financial market design and the role of information in financial markets. I use dynamic models to evaluate the efficiency of different market structures and trading mechanisms. I am also interested in applying structural models to estimate the information content embedded in trades and recommendations. Prior to joining Carnegie Mellon University, I completed a Ph.D. in Finance at Rice University and hold a bachelor’s degree from Baylor University.
 
 ## Links
 
 - SSRN: https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=3595563
 - Google Scholar: https://scholar.google.com/citations?user=wy8eu34AAAAJ&hl=en&oi=ao
 - LinkedIn: https://www.linkedin.com/in/patrick-blonien-52b3b8b0/
-- CV: https://www.patrickblonien.com/Patrick%20Blonien%20CV%20June%202025.pdf
+- CV: https://patrickblonien.com/Patrick%20Blonien%20CV%20June%202025.pdf
 
 ## Affiliations
 
 - CMU Tepper School of Business: https://www.cmu.edu/tepper/
-- Faculty Directory: https://scholars.cmu.edu/26562-patrick-blonien
+- Faculty Page: https://scholars.cmu.edu/26562-patrick-blonien
+- Finance Theory Group: https://www.financetheory.org/members/patrick-blonien
 
 ## Research
 
@@ -27,8 +28,6 @@ My research focuses on corporate finance, asset pricing, and investor behavior, 
 Adding a size-discovery trading protocol, where a break in the limit order book occurs to match orders at a fixed price, can increase allocative efficiency in markets with slow trading frequency.
 
 **Authors:** Patrick Blonien
-**Published:** 2024-01-13
-**Tags:** Job Market Paper
 
 **Abstract:** Adding a size-discovery trading protocol, where a break in the limit order book occurs to match orders at a fixed price, can increase allocative efficiency in markets with slow trading frequency. A high trading frequency spreads liquidity, resulting in a strong incentive to wait for a size-discovery session. This incentive to delay trade is smaller in slower markets, and its negative effect on efficiency can be offset in slower markets by the positive effect of size discovery. This result rationalizes the empirical fact that size-discovery protocols only exist in slower markets. Potential conflicts of interest between traders and platform operators are identified but seem unlikely to drive the existence of size-discovery trading protocols.
 
@@ -47,7 +46,7 @@ How does the quality and influence of advice relate to voting mistakes?
 
 **Authors:** Patrick Blonien, Alan Crane, Kevin Crotty, David De Angelis
 **Author links:** Alan Crane: https://www.alancrane.com/, Kevin Crotty: https://kevin-crotty.com/, David De Angelis: https://www.de-angelis.com/
-**Published:** 2025-02-21
+**Tags:** Revise & Resubmit at The Review of Financial Studies
 
 **Abstract:** How does the quality and influence of advice relate to voting mistakes?  Estimates of latent proposal quality imply advisor ISS's recommendations are wrong half the time for shareholder proposals, while management's error rate is only 15%.  The direction of proxy advice and whether it agrees with management conveys information about ISS's precision, so shareholders make fewer mistakes than either proxy advisors or management.  Most mutual funds' votes are more informative than ISS recommendations.  Vanguard's votes are a better benchmark for proposal quality than either ISS or even management recommendations. Our analysis implies limiting ISS's influence would improve voting outcomes.
 
@@ -80,6 +79,9 @@ In a dynamic model of large traders who manage inventory risk, we show that a da
 **Links:**
 - SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4942934
 
+**Awards:**
+- FMA Annual Meeting Best Paper Award Semifinalist, FMA 2024
+
 **Media Coverage:**
 - Columbia Law School Blue Sky Blog: https://clsbluesky.law.columbia.edu/2024/10/17/is-24-7-trading-better/
 - Comment to the SEC on 24X National Exchange LLC: https://www.sec.gov/comments/10-242/10242-524675-1505242.pdf
@@ -106,9 +108,9 @@ We study whether trades made by members of Congress outperform by combining surv
 
 ## Site Metadata
 
-- Website: https://www.patrickblonien.com
-- Sitemap: https://www.patrickblonien.com/sitemap.xml
-- Last updated: 2025-10-15
+- Website: https://patrickblonien.com
+- Sitemap: https://patrickblonien.com/sitemap.xml
+- Last updated: 2025-10-23
 
 ## Citations
 
@@ -122,5 +124,5 @@ purposes. Please cite appropriately when referencing any materials.
 
 ---
 
-Generated: 2025-10-15
+Generated: 2025-10-23
 Version: Full (detailed abstracts and extended information)

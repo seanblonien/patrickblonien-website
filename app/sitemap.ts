@@ -3,7 +3,7 @@ import {MetadataRoute} from 'next';
 export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.patrickblonien.com';
+  const baseUrl = 'https://patrickblonien.com';
   const currentDate = new Date().toISOString();
 
   return [
