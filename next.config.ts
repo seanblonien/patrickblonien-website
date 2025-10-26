@@ -17,6 +17,7 @@ const nextConfig: NextConfig = withBundleAnalyzer({
     reactRemoveProperties: true,
     removeConsole: process.env.NODE_ENV === 'production',
   },
+  reactCompiler: true,
   poweredByHeader: false,
   reactStrictMode: true,
   experimental: {

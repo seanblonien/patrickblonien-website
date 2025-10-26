@@ -13,7 +13,7 @@ export default function MediaModalContent({media}: MediaModalContentProps) {
     <ul className="space-y-4">
       {media.map((item, index) => (
         <li key={index} className="flex items-start gap-3">
-          <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-primary mt-2" />
+          <div className="shrink-0 w-1.5 h-1.5 rounded-full bg-primary mt-2" />
           <div>
             <a
               href={item.url}

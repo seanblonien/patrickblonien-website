@@ -4,6 +4,7 @@ import stylistic from '@stylistic/eslint-plugin';
 import reactPlugin from 'eslint-plugin-react';
 import hooksPlugin from 'eslint-plugin-react-hooks';
 import tseslint from 'typescript-eslint';
+
 export default tseslint.config(
   // ESLint recommended rules
   eslint.configs.recommended,
