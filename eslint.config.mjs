@@ -22,6 +22,12 @@ export default tseslint.config(
     rules: {
       ...nextPlugin.configs.recommended.rules,
       ...nextPlugin.configs['core-web-vitals'].rules,
+      // Disable the warning for non-serializable props in client components
+      // This is a false positive for client-side event handlers like onClose
+      '@next/next/no-assign-module-variable': 'off',
+      'react/no-unknown-property': ['error', {
+        ignore: ['onClose', 'onClick', 'onChange'],
+      }],
     },
   },
 

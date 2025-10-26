@@ -30,7 +30,7 @@ export default function Footer() {
             </h3>
             <div className="space-y-3 text-sm text-zinc-600">
               <div className="flex items-start gap-2">
-                <Mail className="w-4 h-4 mt-0.5 flex-shrink-0" aria-hidden="true" />
+                <Mail className="w-4 h-4 mt-0.5 shrink-0" aria-hidden="true" />
                 <a
                   href={`mailto:${siteInfo.email}`}
                   className="hover:text-primary focus-ring rounded"
@@ -39,7 +39,7 @@ export default function Footer() {
                 </a>
               </div>
               <div className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" aria-hidden="true" />
+                <MapPin className="w-4 h-4 mt-0.5 shrink-0" aria-hidden="true" />
                 <address className="not-italic">{siteInfo.address}</address>
               </div>
             </div>

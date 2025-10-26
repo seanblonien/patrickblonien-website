@@ -14,7 +14,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "prebuild": "bun run generate",
+    "prebuild": "bun run gen",
     "build": "next build",
     "prod": "next build && serve out",
     "analyze": "ANALYZE=true next build",
@@ -22,9 +22,9 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint --fix .",
     "validate": "concurrently -g -c auto npm:lint npm:typecheck",
-    "generate": "concurrently -g -c auto npm:generate:llms npm:generate:llms-full",
-    "generate:llms": "bun run scripts/generate-llms-txt.ts",
-    "generate:llms-full": "bun run scripts/generate-llms-txt.ts --full"
+    "gen": "concurrently -g -c auto npm:gen:llms npm:gen:llms-full",
+    "gen:llms": "bun run scripts/generate-llms-txt.ts",
+    "gen:llms-full": "bun run scripts/generate-llms-txt.ts --full"
   },
   "dependencies": {
     "@vercel/analytics": "^1.5.0",

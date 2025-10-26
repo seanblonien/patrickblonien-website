@@ -13,7 +13,7 @@ export default function AwardsModalContent({awards}: AwardsModalContentProps) {
     <ul className="space-y-4">
       {awards.map((award, index) => (
         <li key={index} className="flex items-start gap-3">
-          <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-primary mt-2" />
+          <div className="shrink-0 w-1.5 h-1.5 rounded-full bg-primary mt-2" />
           <div>
             <p className="text-base text-zinc-900">{award.title}</p>
             {award.year && (

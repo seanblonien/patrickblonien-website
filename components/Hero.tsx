@@ -11,7 +11,7 @@ export default function Hero() {
           {/* Text Content */}
           <div className="order-2 lg:order-1">
             {/* Decorative accent line */}
-            <div className="w-16 h-1 bg-gradient-to-r from-primary to-primary-400 mb-6 rounded-full" />
+            <div className="w-16 h-1 bg-linear-to-r from-primary to-primary-400 mb-6 rounded-full" />
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-zinc-900 mb-6 leading-tight">
               {siteInfo.name}
@@ -57,12 +57,12 @@ export default function Hero() {
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
             <div className="relative">
               {/* Decorative background shape */}
-              <div className="absolute -inset-4 bg-gradient-to-br from-primary-100 via-primary-50 to-transparent rounded-3xl opacity-50 blur-2xl" />
+              <div className="absolute -inset-4 bg-linear-to-br from-primary-100 via-primary-50 to-transparent rounded-3xl opacity-50 blur-2xl" />
 
               {/* Image container with unique styling */}
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
                 {/* Border accent */}
-                <div className="absolute -inset-2 bg-gradient-to-br from-primary via-primary-600 to-primary-800 rounded-2xl opacity-20" />
+                <div className="absolute -inset-2 bg-linear-to-br from-primary via-primary-600 to-primary-800 rounded-2xl opacity-20" />
 
                 {/* Main image */}
                 <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl ring-4 ring-white">

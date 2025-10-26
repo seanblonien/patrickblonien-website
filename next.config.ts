@@ -7,7 +7,6 @@ const withBundleAnalyzer = Analyzer({
 
 const nextConfig: NextConfig = withBundleAnalyzer({
   output: 'export',
-  cacheComponents: true,
   typescript: {
     ignoreBuildErrors: true,
   },
