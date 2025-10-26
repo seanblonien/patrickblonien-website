@@ -1,5 +1,5 @@
-import {Mail, MapPin, GraduationCap, FileText, Linkedin} from 'lucide-react';
 import {siteInfo} from '@/data/site';
+import {FileText, GraduationCap, Linkedin, Mail, MapPin} from 'lucide-react';
 
 const socialConfig = {
   scholar: {
@@ -15,6 +15,8 @@ const socialConfig = {
     label: 'LinkedIn',
   },
 } as const;
+
+const currentYear = new Date().getFullYear(); // Year at build time
 
 export default function Footer() {
   return (
@@ -96,7 +98,7 @@ export default function Footer() {
           <p className="text-sm text-zinc-500 text-center">
             ©
             {' '}
-            {new Date().getFullYear()}
+            {currentYear}
             {' '}
             {siteInfo.name}
           </p>

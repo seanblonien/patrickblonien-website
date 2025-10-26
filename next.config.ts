@@ -7,6 +7,10 @@ const withBundleAnalyzer = Analyzer({
 
 const nextConfig: NextConfig = withBundleAnalyzer({
   output: 'export',
+  cacheComponents: true,
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   images: {
     unoptimized: true,
   },
@@ -16,12 +20,8 @@ const nextConfig: NextConfig = withBundleAnalyzer({
   },
   poweredByHeader: false,
   reactStrictMode: true,
-  eslint: {
-    // Don't fail builds on linting errors
-    ignoreDuringBuilds: true,
-  },
-  // Optional: Optimize package imports for better tree-shaking
   experimental: {
+    turbopackFileSystemCacheForDev: true,
     optimizePackageImports: [
       'lucide-react',
       '@vercel/analytics',

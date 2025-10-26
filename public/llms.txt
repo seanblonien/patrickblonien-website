@@ -78,7 +78,7 @@ My primary research interests lie in financial market design and the role of inf
 
 - Website: https://patrickblonien.com
 - Sitemap: https://patrickblonien.com/sitemap.xml
-- Last updated: 2025-10-23
+- Last updated: 2025-10-26
 
 ## Citations
 
@@ -87,5 +87,5 @@ sources. Full citation information is available on each paper's SSRN page.
 
 ---
 
-Generated: 2025-10-23
+Generated: 2025-10-26
 Version: Concise (see llms-full.txt for complete details)
