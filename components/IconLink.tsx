@@ -1,4 +1,3 @@
-import type {LinkType} from '@/data/types';
 import {
   Code,
   Database,
@@ -9,8 +8,9 @@ import {
   Quote,
   Video,
 } from 'lucide-react';
+import type { LinkType } from '@/data/types';
 
-const linkIcons: Record<LinkType, React.ComponentType<{className?: string}>> = {
+const linkIcons: Record<LinkType, React.ComponentType<{ className?: string }>> = {
   paper: FileText,
   slides: Presentation,
   bibtex: Quote,
@@ -33,25 +33,25 @@ const defaultLabels: Record<LinkType, string> = {
 };
 
 type IconLinkProps = {
-  type: LinkType;
   label?: string;
+  type: LinkType;
   url: string;
 };
 
-export default function IconLink({type, label, url}: IconLinkProps) {
+export const IconLink: React.FC<IconLinkProps> = ({ label, type, url }) => {
   const Icon = linkIcons[type];
   const displayLabel = label || defaultLabels[type];
 
   return (
     <a
-      href={url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm text-zinc-700 bg-white border border-zinc-300 rounded-md hover:border-primary hover:text-primary hover:bg-zinc-50 focus-ring transition-all cursor-pointer"
       aria-label={`${displayLabel} (opens in new tab)`}
+      className='inline-flex items-center gap-1.5 px-3 py-1.5 text-sm text-zinc-700 bg-white border border-zinc-300 rounded-md hover:border-primary hover:text-primary hover:bg-zinc-50 focus-ring transition-all cursor-pointer'
+      href={url}
+      rel='noopener noreferrer'
+      target='_blank'
     >
-      <Icon className="w-4 h-4" aria-hidden="true" />
+      <Icon aria-hidden='true' className='w-4 h-4' />
       <span>{displayLabel}</span>
     </a>
   );
-}
+};

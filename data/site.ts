@@ -1,4 +1,4 @@
-import type {SiteInfo} from './types';
+import type { SiteInfo } from './types';
 
 export const siteInfo: SiteInfo = {
   name: 'Patrick Blonien',
@@ -8,7 +8,7 @@ export const siteInfo: SiteInfo = {
   address: '5000 Forbes Ave, Pittsburgh, PA 15213, USA',
   researchFocus:
     'My primary research interests lie in financial market design and the role of information in financial markets. I use dynamic models to evaluate the efficiency of different market structures and trading mechanisms. I am also interested in applying structural models to estimate the information content embedded in trades and recommendations. Prior to joining Carnegie Mellon University, I completed a Ph.D. in Finance at Rice University and hold a bachelor’s degree from Baylor University.',
-  cvUrl: `/Patrick Blonien CV June 2025.pdf`,
+  cvUrl: '/Patrick Blonien CV June 2025.pdf',
   portraitUrl: '/portrait.webp',
   socials: [
     {

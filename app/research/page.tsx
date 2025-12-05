@@ -31,19 +31,19 @@
  * The page will automatically update when you save the file.
  */
 
-import ResearchList from '@/components/ResearchList';
-import {BreadcrumbStructuredData} from '@/components/StructuredData';
-import {siteInfo} from '@/data/site';
-import cmuTartan from '@/public/cmu_tartan.webp';
-import type {Metadata} from 'next';
 import Image from 'next/image';
+import { ResearchList } from '@/components/ResearchList';
+import { BreadcrumbStructuredData } from '@/components/StructuredData';
+import { siteInfo } from '@/data/site';
+import cmuTartan from '@/public/cmu_tartan.webp';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Research',
   description: `Research papers and publications by ${siteInfo.name}, ${siteInfo.title} at ${siteInfo.institution}. Explore working papers and publications in corporate finance, asset pricing, and investor behavior.`,
 };
 
-export default function ResearchPage() {
+const ResearchPage: React.FC = () => {
   const breadcrumbItems = [
     {
       name: 'Home',
@@ -60,31 +60,33 @@ export default function ResearchPage() {
       <BreadcrumbStructuredData items={breadcrumbItems} />
 
       {/* Full-width banner with overlaid title */}
-      <div className="relative w-full h-32 sm:h-40 md:h-48">
+      <div className='relative w-full h-32 sm:h-40 md:h-48'>
         <Image
-          src={cmuTartan}
-          alt="CMU Tartan Pattern"
           fill
-          className="object-cover object-center"
-          style={{minWidth: '100%', minHeight: '100%'}}
           priority
-          fetchPriority="high"
+          alt='CMU Tartan Pattern'
+          className='object-cover object-center'
+          fetchPriority='high'
+          src={cmuTartan}
+          style={{ minWidth: '100%', minHeight: '100%' }}
         />
         {/* Overlaid title positioned at bottom left */}
-        <div className="absolute bottom-0 left-0 right-0">
-          <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8 pb-4 sm:pb-6">
-            <h1 className="text-4xl sm:text-5xl font-bold text-white drop-shadow-lg">
+        <div className='absolute bottom-0 left-0 right-0'>
+          <div className='mx-auto max-w-content px-4 sm:px-6 lg:px-8 pb-4 sm:pb-6'>
+            <h1 className='text-4xl sm:text-5xl font-bold text-white drop-shadow-lg'>
               Research
             </h1>
           </div>
         </div>
       </div>
 
-      <div className="py-12 sm:py-16">
-        <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
+      <div className='py-12 sm:py-16'>
+        <div className='mx-auto max-w-content px-4 sm:px-6 lg:px-8'>
           <ResearchList />
         </div>
       </div>
     </>
   );
-}
+};
+
+export default ResearchPage;

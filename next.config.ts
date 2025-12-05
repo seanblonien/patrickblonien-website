@@ -1,5 +1,5 @@
 import Analyzer from '@next/bundle-analyzer';
-import type {NextConfig} from 'next';
+import type { NextConfig } from 'next';
 
 const withBundleAnalyzer = Analyzer({
   enabled: process.env.ANALYZE === 'true',
@@ -20,8 +20,11 @@ const nextConfig: NextConfig = withBundleAnalyzer({
   reactCompiler: true,
   poweredByHeader: false,
   reactStrictMode: true,
+  // cacheComponents: true,
   experimental: {
     turbopackFileSystemCacheForDev: true,
+    optimizeCss: true,
+    cssChunking: true,
     optimizePackageImports: [
       'lucide-react',
       '@vercel/analytics',

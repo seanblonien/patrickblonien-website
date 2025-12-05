@@ -3,7 +3,7 @@ import congressionalStockTradingImg from '@/public/congressional_stock_trading.w
 import detectingTransformedTradeImg from '@/public/detecting_transformed_trade.webp';
 import is247TradingBetterImg from '@/public/is_24-7_trading_better.webp';
 import sizeDiscoveryImg from '@/public/size_discovery.webp';
-import type {ResearchPaper} from './types';
+import type { ResearchPaper } from './types';
 
 /**
  * Research Papers Data
@@ -45,7 +45,7 @@ export const papers: ResearchPaper[] = [
   {
     id: 'size-discovery-slow-markets',
     title: 'Size Discovery in Slow Markets',
-    authors: [{name: 'Patrick Blonien', isPatrick: true}],
+    authors: [{ name: 'Patrick Blonien', isPatrick: true }],
     paperType: 'Working Papers',
     abstract:
       'Adding a size-discovery trading protocol, where a break in the limit order book occurs to match orders at a fixed price, can increase allocative efficiency in markets with slow trading frequency. A high trading frequency spreads liquidity, resulting in a strong incentive to wait for a size-discovery session. This incentive to delay trade is smaller in slower markets, and its negative effect on efficiency can be offset in slower markets by the positive effect of size discovery. This result rationalizes the empirical fact that size-discovery protocols only exist in slower markets. Potential conflicts of interest between traders and platform operators are identified but seem unlikely to drive the existence of size-discovery trading protocols.',
@@ -123,10 +123,10 @@ export const papers: ResearchPaper[] = [
     id: 'quality-of-advice-shareholder-voting',
     title: 'The Quality of Advice in Shareholder Voting',
     authors: [
-      {name: 'Patrick Blonien', isPatrick: true},
-      {name: 'Alan Crane', url: 'https://www.alancrane.com/'},
-      {name: 'Kevin Crotty', url: 'https://kevin-crotty.com/'},
-      {name: 'David De Angelis', url: 'https://www.de-angelis.com/'},
+      { name: 'Patrick Blonien', isPatrick: true },
+      { name: 'Alan Crane', url: 'https://www.alancrane.com/' },
+      { name: 'Kevin Crotty', url: 'https://kevin-crotty.com/' },
+      { name: 'David De Angelis', url: 'https://www.de-angelis.com/' },
     ],
     paperType: 'Working Papers',
     abstract:
@@ -171,9 +171,9 @@ export const papers: ResearchPaper[] = [
     id: 'detecting-informed-trade-corporate-insiders',
     title: 'Detecting Informed Trade by Corporate Insiders',
     authors: [
-      {name: 'Patrick Blonien', isPatrick: true},
-      {name: 'Alan Crane', url: 'https://www.alancrane.com/'},
-      {name: 'Kevin Crotty', url: 'https://kevin-crotty.com/'},
+      { name: 'Patrick Blonien', isPatrick: true },
+      { name: 'Alan Crane', url: 'https://www.alancrane.com/' },
+      { name: 'Kevin Crotty', url: 'https://kevin-crotty.com/' },
     ],
     paperType: 'Working Papers',
     abstract:
@@ -245,8 +245,8 @@ export const papers: ResearchPaper[] = [
     id: 'is-24-7-trading-better',
     title: 'Is 24/7 Trading Better?',
     authors: [
-      {name: 'Patrick Blonien', isPatrick: true},
-      {name: 'Alexander Ober', url: 'https://www.alexander-ober.com/'},
+      { name: 'Patrick Blonien', isPatrick: true },
+      { name: 'Alexander Ober', url: 'https://www.alexander-ober.com/' },
     ],
     paperType: 'Working Papers',
     abstract:
@@ -324,9 +324,9 @@ export const papers: ResearchPaper[] = [
     id: 'congressional-stock-trading',
     title: 'Should the Public be Concerned about Congressional Stock Trading?',
     authors: [
-      {name: 'Patrick Blonien', isPatrick: true},
-      {name: 'Alan Crane', url: 'https://www.alancrane.com/'},
-      {name: 'Kevin Crotty', url: 'https://kevin-crotty.com/'},
+      { name: 'Patrick Blonien', isPatrick: true },
+      { name: 'Alan Crane', url: 'https://www.alancrane.com/' },
+      { name: 'Kevin Crotty', url: 'https://kevin-crotty.com/' },
     ],
     paperType: 'Working Papers',
     abstract:

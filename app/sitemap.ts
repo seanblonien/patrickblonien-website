@@ -1,4 +1,4 @@
-import {MetadataRoute} from 'next';
+import { MetadataRoute } from 'next';
 
 export const dynamic = 'force-static';
 
@@ -11,7 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: baseUrl,
       lastModified: currentDate,
       changeFrequency: 'monthly',
-      priority: 1.0,
+      priority: 1,
     },
     {
       url: `${baseUrl}/research`,

@@ -1,18 +1,20 @@
-import Footer from '@/components/Footer';
-import NavBar from '@/components/NavBar';
-import {PersonStructuredData, WebsiteStructuredData} from '@/components/StructuredData';
-import {siteInfo} from '@/data/site';
-import {Analytics} from '@vercel/analytics/next';
-import {SpeedInsights} from '@vercel/speed-insights/next';
-import type {Metadata} from 'next';
-import {Merriweather, Open_Sans} from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Merriweather, Open_Sans as OpenSans } from 'next/font/google';
+import { PropsWithChildren } from 'react';
+import { Footer } from '@/components/Footer';
+import { NavBar } from '@/components/NavBar';
+import { PersonStructuredData, WebsiteStructuredData } from '@/components/StructuredData';
+import { siteInfo } from '@/data/site';
+import type { Metadata } from 'next';
 import './globals.css';
 
-const openSans = Open_Sans({
+const openSans = OpenSans({
   weight: ['400', '700'],
   subsets: ['latin'],
   variable: '--font-open-sans',
   display: 'swap',
+  // eslint-disable-next-line @typescript-eslint/naming-convention -- library API
   preload: true,
 });
 
@@ -21,6 +23,7 @@ const merriweather = Merriweather({
   subsets: ['latin'],
   variable: '--font-merriweather',
   display: 'swap',
+  // eslint-disable-next-line @typescript-eslint/naming-convention -- library API
   preload: true,
 });
 
@@ -31,8 +34,8 @@ export const metadata: Metadata = {
     template: `${siteInfo.name} | %s`,
   },
   description:
-    siteInfo.researchFocus
-    || `${siteInfo.name}, ${siteInfo.title} at ${siteInfo.institution}. My primary research area is financial market design. I am also interested in using structural models to estimate economically important latent variables.`,
+    siteInfo.researchFocus ||
+    `${siteInfo.name}, ${siteInfo.title} at ${siteInfo.institution}. My primary research area is financial market design. I am also interested in using structural models to estimate economically important latent variables.`,
   keywords: [
     'Patrick Blonien',
     'finance',
@@ -47,7 +50,7 @@ export const metadata: Metadata = {
     'finance professor',
     'financial research',
   ],
-  authors: [{name: siteInfo.name}],
+  authors: [{ name: siteInfo.name }],
   creator: siteInfo.name,
   publisher: siteInfo.name,
   alternates: {
@@ -102,10 +105,14 @@ export const metadata: Metadata = {
     images: [siteInfo.portraitUrl],
   },
   robots: {
+    // eslint-disable-next-line @typescript-eslint/naming-convention -- library API
     index: true,
+    // eslint-disable-next-line @typescript-eslint/naming-convention -- library API
     follow: true,
     googleBot: {
+    // eslint-disable-next-line @typescript-eslint/naming-convention -- library API
       'index': true,
+      // eslint-disable-next-line @typescript-eslint/naming-convention -- library API
       'follow': true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
@@ -117,24 +124,21 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+const RootLayout: React.FC<PropsWithChildren> = ({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en" className={`${openSans.variable} ${merriweather.variable}`}>
-      <head>
-        <PersonStructuredData />
-        <WebsiteStructuredData />
-      </head>
-      <body className="font-sans flex flex-col min-h-screen">
-        <NavBar />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <Analytics />
-        <SpeedInsights />
-      </body>
-    </html>
-  );
-}
+}) => (
+  <html className={`${openSans.variable} ${merriweather.variable}`} lang='en'>
+    <head>
+      <PersonStructuredData />
+      <WebsiteStructuredData />
+    </head>
+    <body className='font-sans flex flex-col min-h-screen'>
+      <NavBar />
+      <main className='flex-1'>{children}</main>
+      <Footer />
+      <Analytics />
+      <SpeedInsights />
+    </body>
+  </html>
+);
+export default RootLayout;

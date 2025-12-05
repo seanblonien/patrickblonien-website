@@ -1,6 +1,6 @@
-import {siteInfo} from '@/data/site';
+import { siteInfo } from '@/data/site';
 
-export function PersonStructuredData() {
+export const PersonStructuredData = () => {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Person',
@@ -36,13 +36,13 @@ export function PersonStructuredData() {
 
   return (
     <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{__html: JSON.stringify(structuredData)}}
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      type='application/ld+json'
     />
   );
-}
+};
 
-export function WebsiteStructuredData() {
+export const WebsiteStructuredData = () => {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
@@ -58,18 +58,18 @@ export function WebsiteStructuredData() {
 
   return (
     <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{__html: JSON.stringify(structuredData)}}
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      type='application/ld+json'
     />
   );
-}
+};
 
-export function BreadcrumbStructuredData({items}: {
+export const BreadcrumbStructuredData = ({ items}: {
   items: {
     name: string;
     url: string;
   }[];
-}) {
+}) => {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -83,23 +83,23 @@ export function BreadcrumbStructuredData({items}: {
 
   return (
     <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{__html: JSON.stringify(structuredData)}}
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      type='application/ld+json'
     />
   );
-}
+};
 
-export function ScholarlyArticleStructuredData({paper}: {
+export const ScholarlyArticleStructuredData = ({ paper}: {
   paper: {
-    title: string;
     abstract?: string;
-    authors: {name: string; url?: string}[];
-    venue?: string;
+    authors: { name: string; url?: string }[];
     date?: string;
-    pdfUrl?: string;
     doi?: string;
+    pdfUrl?: string;
+    title: string;
+    venue?: string;
   };
-}) {
+}) => {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'ScholarlyArticle',
@@ -124,8 +124,8 @@ export function ScholarlyArticleStructuredData({paper}: {
 
   return (
     <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{__html: JSON.stringify(structuredData)}}
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      type='application/ld+json'
     />
   );
-}
+};

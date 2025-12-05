@@ -1,22 +1,22 @@
 'use client';
 
-import {X} from 'lucide-react';
-import {useEffect, useRef} from 'react';
+import { X } from 'lucide-react';
+import { useEffect, useRef } from 'react';
 
 type ModalProps = {
-  isOpen: boolean;
-  onClose: () => void;
-  title: string;
   children: React.ReactNode;
+  isOpen: boolean;
+  onCloseAction: () => void;
+  title: string;
 };
 
-export default function Modal({isOpen, onClose, title, children}: ModalProps) {
+export const Modal: React.FC<ModalProps> = ({ children, isOpen, onCloseAction, title }) => {
   const modalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
-        onClose();
+        onCloseAction();
       }
     };
 
@@ -29,7 +29,7 @@ export default function Modal({isOpen, onClose, title, children}: ModalProps) {
       document.removeEventListener('keydown', handleEscape);
       document.body.style.overflow = 'unset';
     };
-  }, [isOpen, onClose]);
+  }, [isOpen, onCloseAction]);
   useEffect(() => {
     if (isOpen && modalRef.current) {
       modalRef.current.focus();
@@ -40,11 +40,10 @@ export default function Modal({isOpen, onClose, title, children}: ModalProps) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-zinc-500/50"
-      onClick={onClose}
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="modal-title"
+      aria-labelledby='modal-title'
+      aria-modal='true'
+      className='fixed inset-0 z-50 flex items-center justify-center p-4'
+      role='dialog'
       style={{
         margin: 0,
         width: '100vw',
@@ -55,34 +54,39 @@ export default function Modal({isOpen, onClose, title, children}: ModalProps) {
         bottom: 0,
       }}
     >
+      <button
+        aria-label='Close modal'
+        className='absolute inset-0 bg-zinc-500/50 cursor-default'
+        type='button'
+        onClick={onCloseAction}
+      />
       <div
         ref={modalRef}
-        className="relative bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[85vh] overflow-hidden"
-        onClick={(e) => e.stopPropagation()}
+        className='relative bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[85vh] overflow-hidden'
         tabIndex={-1}
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-6 py-5 border-b border-zinc-200">
+        <div className='flex items-center justify-between px-6 py-5 border-b border-zinc-200'>
           <h2
-            id="modal-title"
-            className="text-2xl font-serif font-bold text-zinc-900"
+            className='text-2xl font-serif font-bold text-zinc-900'
+            id='modal-title'
           >
             {title}
           </h2>
           <button
-            onClick={onClose}
-            className="p-2 text-zinc-400 hover:text-zinc-600 hover:bg-zinc-100 rounded-lg transition-colors focus-ring"
-            aria-label="Close modal"
+            aria-label='Close modal'
+            className='p-2 text-zinc-400 hover:text-zinc-600 hover:bg-zinc-100 rounded-lg transition-colors focus-ring'
+            onClick={onCloseAction}
           >
-            <X className="w-6 h-6" />
+            <X className='w-6 h-6' />
           </button>
         </div>
 
         {/* Content */}
-        <div className="px-6 py-6 overflow-y-auto max-h-[calc(85vh-5rem)]">
+        <div className='px-6 py-6 overflow-y-auto max-h-[calc(85vh-5rem)]'>
           {children}
         </div>
       </div>
     </div>
   );
-}
+};
