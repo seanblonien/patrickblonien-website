@@ -21,7 +21,7 @@ export const PaperLinks: React.FC<PaperLinksProps> = ({
   const hasPresentations = paper.presentations && paper.presentations.length > 0;
   const hasAwards = paper.awards && paper.awards.length > 0;
   const hasMedia = paper.media && paper.media.length > 0;
-  const shouldRenderSection = (hasLinks ?? (hasPresentations) ?? hasAwards) ?? hasMedia;
+  const shouldRenderSection = (hasLinks ?? hasPresentations ?? hasAwards) ?? hasMedia;
 
   if (!shouldRenderSection) {
     return null;

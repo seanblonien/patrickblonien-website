@@ -5,7 +5,7 @@
   "private": true,
   "sideEffects": false,
   "description": "Personal academic website for Patrick Blonien",
-  "packageManager": "npm@11.6.4+sha512.1118cab46a05a50aee6bff5b1b4fa1df18afff89d57465620a3518035026955db87c5bdf9d207b07b7487d99f2490d450cb774655ad63ec2cba7bf1d0ad25d45",
+  "packageManager": "npm@11.7.0+sha512.c22099a6fff8d5b2286c2a09df5352b4858a7c0c716320f58989d60ad8b29ecf2ce6fdfe97ccb41c23ffb1272e1fa079f868487dd6b81d02a2a9e199c095a117",
   "engines": {
     "node": ">=24",
     "npm": ">=10",
@@ -17,7 +17,7 @@
     "prebuild": "bun run gen",
     "build": "next build",
     "prod": "next build && serve out",
-    "analyze": "ANALYZE=true next build",
+    "analyze": "next experimental-analyze",
     "start": "next start",
     "typecheck": "tsc --noEmit",
     "lint": "eslint --fix .",
@@ -36,7 +36,6 @@
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "16.0.0",
     "@next/eslint-plugin-next": "16.0.0",
     "@seanblonien/eslint-config-react": "^1.0.7",
     "@stylistic/eslint-plugin": "^5.2.3",
@@ -54,8 +53,7 @@
     "typescript": "^5.9.3"
   },
   "overrides": {
-    "@types/react": "19.2.2",
-    "@types/react-dom": "19.2.2"
+    "eslint-plugin-react-hooks": "7.0.0"
   },
   "browserslist": [
     "Chrome >= 109",

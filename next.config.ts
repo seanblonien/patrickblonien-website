@@ -1,11 +1,6 @@
-import Analyzer from '@next/bundle-analyzer';
 import type { NextConfig } from 'next';
 
-const withBundleAnalyzer = Analyzer({
-  enabled: process.env.ANALYZE === 'true',
-});
-
-const nextConfig: NextConfig = withBundleAnalyzer({
+const nextConfig: NextConfig = {
   output: 'export',
   typescript: {
     ignoreBuildErrors: true,
@@ -31,6 +26,6 @@ const nextConfig: NextConfig = withBundleAnalyzer({
       '@vercel/speed-insights',
     ],
   },
-});
+};
 
 export default nextConfig;

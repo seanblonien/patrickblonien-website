@@ -127,7 +127,7 @@ Object.entries(papersByType).forEach(([paperType, typePapers]) => {
 
     // Single-line summary (first sentence of abstract or tags) - full version only
     if (isFullVersion && paper.abstract) {
-      const firstSentence = (/^[^.!?]+[.!?]+/.exec(paper.abstract))?.[0] || '';
+      const firstSentence = /^[^.!?]+[.!?]+/.exec(paper.abstract)?.[0] || '';
       if (firstSentence) {
         content += `${firstSentence.trim()}\n\n`;
       }
