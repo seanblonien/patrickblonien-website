@@ -110,7 +110,7 @@ We study whether trades made by members of Congress outperform by combining surv
 
 - Website: https://patrickblonien.com
 - Sitemap: https://patrickblonien.com/sitemap.xml
-- Last updated: 2025-10-26
+- Last updated: 2026-01-08
 
 ## Citations
 
@@ -124,5 +124,5 @@ purposes. Please cite appropriately when referencing any materials.
 
 ---
 
-Generated: 2025-10-26
+Generated: 2026-01-08
 Version: Full (detailed abstracts and extended information)

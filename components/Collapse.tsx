@@ -1,7 +1,7 @@
 'use client';
 
 import { ChevronDown } from 'lucide-react';
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 
 type CollapseProps = {
   children: React.ReactNode;
@@ -15,19 +15,6 @@ export const Collapse: React.FC<CollapseProps> = ({
   title,
 }) => {
   const [isOpen, setIsOpen] = useState(isDefaultOpen);
-  const [height, setHeight] = useState<number | undefined>(isDefaultOpen ? undefined : 0);
-  const contentRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!contentRef.current) return;
-
-    if (isOpen) {
-      const contentHeight = contentRef.current.scrollHeight;
-      setHeight(contentHeight);
-    } else {
-      setHeight(0);
-    }
-  }, [isOpen]);
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
@@ -51,11 +38,11 @@ export const Collapse: React.FC<CollapseProps> = ({
       </button>
 
       <div
-        ref={contentRef}
         aria-hidden={!isOpen}
-        className='transition-all duration-300 ease-in-out overflow-hidden'
+        className={`transition-all duration-300 ease-in-out overflow-hidden ${
+          isOpen ? 'max-h-250 opacity-100' : 'max-h-0 opacity-0'
+        }`}
         id='collapse-content'
-        style={{ height }}
       >
         <div className='px-4 py-3 text-sm text-zinc-700 leading-relaxed bg-white'>
           {children}
