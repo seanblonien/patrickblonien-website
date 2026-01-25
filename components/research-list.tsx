@@ -1,7 +1,7 @@
 import { papers } from '@/data/papers';
-import { ResearchCard } from './ResearchCard';
+import { ResearchCard } from './research-card';
 
-export const ResearchList: React.FC = () => {
+export function ResearchList() {
   const workingPapers = papers.filter((p) => p.paperType === 'Working Papers');
   const publications = papers.filter((p) => p.paperType === 'Publications');
 
@@ -46,4 +46,4 @@ export const ResearchList: React.FC = () => {
       )}
     </div>
   );
-};
+}

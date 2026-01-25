@@ -2,19 +2,19 @@
 
 import { useState } from 'react';
 import type { ResearchPaper } from '@/data/types';
-import { AwardsModalContent } from './AwardsModalContent';
-import { MediaModalContent } from './MediaModalContent';
-import { Modal } from './Modal';
-import { PaperContent } from './PaperContent';
-import { PaperLinks } from './PaperLinks';
-import { PresentationsModalContent } from './PresentationsModalContent';
+import { AwardsModalContent } from './awards-modal-content';
+import { MediaModalContent } from './media-modal-content';
+import { Modal } from './modal';
+import { PaperContent } from './paper-content';
+import { PaperLinks } from './paper-links';
+import { PresentationsModalContent } from './presentations-modal-content';
 
 type ResearchCardClientProps = {
   children: React.ReactNode;
   paper: ResearchPaper;
 };
 
-export const ResearchCardClient: React.FC<ResearchCardClientProps> = ({ children, paper }) => {
+export function ResearchCardClient({ children, paper }: ResearchCardClientProps) {
   const [isPresentationsModalOpen, setIsPresentationsModalOpen] = useState(false);
   const [isAwardsModalOpen, setIsAwardsModalOpen] = useState(false);
   const [isMediaModalOpen, setIsMediaModalOpen] = useState(false);
@@ -63,4 +63,4 @@ export const ResearchCardClient: React.FC<ResearchCardClientProps> = ({ children
       </Modal>
     </>
   );
-};
+}

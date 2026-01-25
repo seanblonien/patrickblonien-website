@@ -1,7 +1,7 @@
 import { FileText } from 'lucide-react';
 import Image, { type StaticImageData } from 'next/image';
 import type { ResearchPaper } from '@/data/types';
-import { ResearchCardClient } from './ResearchCardClient';
+import { ResearchCardClient } from './research-card-client';
 
 type ResearchCardProps = {
   paper: ResearchPaper;
@@ -9,11 +9,12 @@ type ResearchCardProps = {
 
 type PaperImageProps = {
   gradient: string;
+  imageDimensions: { height: number; width: number } | undefined;
   imageUrl?: StaticImageData;
   title: string;
 };
 
-const PaperImage = ({ gradient, imageUrl, title }: PaperImageProps) => {
+function PaperImage({ gradient, imageDimensions, imageUrl, title }: PaperImageProps) {
   const baseClasses = 'flex-shrink-0 w-full sm:w-1/3 flex items-center justify-center pl-2 py-4';
   const gradientClasses = imageUrl ? '' : `h-48 sm:h-auto bg-gradient-to-br ${gradient}`;
   const containerClasses = `${baseClasses} ${gradientClasses}`;
@@ -24,7 +25,9 @@ const PaperImage = ({ gradient, imageUrl, title }: PaperImageProps) => {
         <Image
           alt={title}
           className='w-full h-auto object-contain'
+          height={imageDimensions?.height ?? 240}
           src={imageUrl}
+          width={imageDimensions?.width ?? 320}
         />
       </div>
     );
@@ -37,14 +40,19 @@ const PaperImage = ({ gradient, imageUrl, title }: PaperImageProps) => {
       </div>
     </div>
   );
-};
+}
 
-export const ResearchCard: React.FC<ResearchCardProps> = ({ paper }) => {
+export function ResearchCard({ paper }: ResearchCardProps) {
   const gradient = 'from-primary-400 to-primary-600';
 
   return (
     <ResearchCardClient paper={paper}>
-      <PaperImage gradient={gradient} imageUrl={paper.imageUrl} title={paper.title} />
+      <PaperImage
+        gradient={gradient}
+        imageDimensions={paper.imageDimensions}
+        imageUrl={paper.imageUrl}
+        title={paper.title}
+      />
     </ResearchCardClient>
   );
-};
+}

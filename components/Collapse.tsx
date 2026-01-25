@@ -9,11 +9,11 @@ type CollapseProps = {
   title: string;
 };
 
-export const Collapse: React.FC<CollapseProps> = ({
+export function Collapse({
   children,
   isDefaultOpen = false,
   title,
-}) => {
+}: CollapseProps) {
   const [isOpen, setIsOpen] = useState(isDefaultOpen);
 
   const handleToggle = () => {
@@ -50,4 +50,4 @@ export const Collapse: React.FC<CollapseProps> = ({
       </div>
     </div>
   );
-};
+}

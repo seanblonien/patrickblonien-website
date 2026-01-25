@@ -10,7 +10,7 @@ type ModalProps = {
   title: string;
 };
 
-export const Modal: React.FC<ModalProps> = ({ children, isOpen, onCloseAction, title }) => {
+export function Modal({ children, isOpen, onCloseAction, title }: ModalProps) {
   const modalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -89,4 +89,4 @@ export const Modal: React.FC<ModalProps> = ({ children, isOpen, onCloseAction, t
       </div>
     </div>
   );
-};
+}

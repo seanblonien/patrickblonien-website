@@ -2,9 +2,9 @@ import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Merriweather, Open_Sans as OpenSans } from 'next/font/google';
 import { PropsWithChildren } from 'react';
-import { Footer } from '@/components/Footer';
-import { NavBar } from '@/components/NavBar';
-import { PersonStructuredData, WebsiteStructuredData } from '@/components/StructuredData';
+import { Footer } from '@/components/footer';
+import { NavBar } from '@/components/nav-bar';
+import { PersonStructuredData, WebsiteStructuredData } from '@/components/structured-data';
 import { siteInfo } from '@/data/site';
 import type { Metadata } from 'next';
 import './globals.css';
@@ -124,21 +124,23 @@ export const metadata: Metadata = {
   },
 };
 
-const RootLayout: React.FC<PropsWithChildren> = ({
+function RootLayout({
   children,
-}) => (
-  <html className={`${openSans.variable} ${merriweather.variable}`} lang='en'>
-    <head>
-      <PersonStructuredData />
-      <WebsiteStructuredData />
-    </head>
-    <body className='font-sans flex flex-col min-h-screen'>
-      <NavBar />
-      <main className='flex-1'>{children}</main>
-      <Footer />
-      <Analytics />
-      <SpeedInsights />
-    </body>
-  </html>
-);
+}: PropsWithChildren) {
+  return (
+    <html className={`${openSans.variable} ${merriweather.variable}`} lang='en'>
+      <head>
+        <PersonStructuredData />
+        <WebsiteStructuredData />
+      </head>
+      <body className='font-sans flex flex-col min-h-screen'>
+        <NavBar />
+        <main className='flex-1'>{children}</main>
+        <Footer />
+        <Analytics />
+        <SpeedInsights />
+      </body>
+    </html>
+  );
+}
 export default RootLayout;

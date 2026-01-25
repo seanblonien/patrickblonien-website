@@ -32,8 +32,8 @@
  */
 
 import Image from 'next/image';
-import { ResearchList } from '@/components/ResearchList';
-import { BreadcrumbStructuredData } from '@/components/StructuredData';
+import { ResearchList } from '@/components/research-list';
+import { BreadcrumbStructuredData } from '@/components/structured-data';
 import { siteInfo } from '@/data/site';
 import cmuTartan from '@/public/cmu_tartan.webp';
 import type { Metadata } from 'next';
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   description: `Research papers and publications by ${siteInfo.name}, ${siteInfo.title} at ${siteInfo.institution}. Explore working papers and publications in corporate finance, asset pricing, and investor behavior.`,
 };
 
-const ResearchPage: React.FC = () => {
+function ResearchPage() {
   const breadcrumbItems = [
     {
       name: 'Home',
@@ -87,6 +87,6 @@ const ResearchPage: React.FC = () => {
       </div>
     </>
   );
-};
+}
 
 export default ResearchPage;

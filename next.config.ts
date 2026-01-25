@@ -17,9 +17,11 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   // cacheComponents: true,
   experimental: {
+    taint: true,
     turbopackFileSystemCacheForDev: true,
     optimizeCss: true,
     cssChunking: true,
+    inlineCss: true,
     optimizePackageImports: [
       'lucide-react',
       '@vercel/analytics',

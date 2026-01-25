@@ -4,7 +4,7 @@ type MediaModalContentProps = {
   media?: ResearchPaper['media'];
 };
 
-export const MediaModalContent: React.FC<MediaModalContentProps> = ({ media }) => {
+export function MediaModalContent({ media }: MediaModalContentProps) {
   if (!media || media.length === 0) {
     return null;
   }
@@ -28,4 +28,4 @@ export const MediaModalContent: React.FC<MediaModalContentProps> = ({ media }) =
       ))}
     </ul>
   );
-};
+}

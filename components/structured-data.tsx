@@ -1,6 +1,6 @@
 import { siteInfo } from '@/data/site';
 
-export const PersonStructuredData = () => {
+export function PersonStructuredData() {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Person',
@@ -40,9 +40,9 @@ export const PersonStructuredData = () => {
       type='application/ld+json'
     />
   );
-};
+}
 
-export const WebsiteStructuredData = () => {
+export function WebsiteStructuredData() {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
@@ -62,14 +62,14 @@ export const WebsiteStructuredData = () => {
       type='application/ld+json'
     />
   );
-};
+}
 
-export const BreadcrumbStructuredData = ({ items}: {
+export function BreadcrumbStructuredData({ items}: {
   items: {
     name: string;
     url: string;
   }[];
-}) => {
+}) {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -87,9 +87,9 @@ export const BreadcrumbStructuredData = ({ items}: {
       type='application/ld+json'
     />
   );
-};
+}
 
-export const ScholarlyArticleStructuredData = ({ paper}: {
+export function ScholarlyArticleStructuredData({ paper}: {
   paper: {
     abstract?: string;
     authors: { name: string; url?: string }[];
@@ -99,7 +99,7 @@ export const ScholarlyArticleStructuredData = ({ paper}: {
     title: string;
     venue?: string;
   };
-}) => {
+}) {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'ScholarlyArticle',
@@ -128,4 +128,4 @@ export const ScholarlyArticleStructuredData = ({ paper}: {
       type='application/ld+json'
     />
   );
-};
+}

@@ -15,7 +15,7 @@ const navLinks = [
   },
 ];
 
-export const NavBar: React.FC = () => {
+export function NavBar() {
   const pathname = usePathname();
 
   return (
@@ -53,4 +53,4 @@ export const NavBar: React.FC = () => {
       </nav>
     </header>
   );
-};
+}

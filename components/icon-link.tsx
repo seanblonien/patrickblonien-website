@@ -38,7 +38,7 @@ type IconLinkProps = {
   url: string;
 };
 
-export const IconLink: React.FC<IconLinkProps> = ({ label, type, url }) => {
+export function IconLink({ label, type, url }: IconLinkProps) {
   const Icon = linkIcons[type];
   const displayLabel = label || defaultLabels[type];
 
@@ -54,4 +54,4 @@ export const IconLink: React.FC<IconLinkProps> = ({ label, type, url }) => {
       <span>{displayLabel}</span>
     </a>
   );
-};
+}

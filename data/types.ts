@@ -50,12 +50,18 @@ export type ExternalAuthor = {
 
 export type Author = PatrickAuthor | ExternalAuthor;
 
+export type ImageDimensions = {
+  height: number;
+  width: number;
+};
+
 export type ResearchPaper = {
   abstract?: string;
   authors: Author[];
   awards?: Award[];
   date?: string;
   id: string;
+  imageDimensions?: ImageDimensions;
   imageUrl?: StaticImageData;
   links?: ResearchLink[];
   media?: MediaLink[];

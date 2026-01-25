@@ -4,7 +4,7 @@ type AwardsModalContentProps = {
   awards?: ResearchPaper['awards'];
 };
 
-export const AwardsModalContent: React.FC<AwardsModalContentProps> = ({ awards }) => {
+export function AwardsModalContent({ awards }: AwardsModalContentProps) {
   if (!awards || awards.length === 0) {
     return null;
   }
@@ -24,4 +24,4 @@ export const AwardsModalContent: React.FC<AwardsModalContentProps> = ({ awards }
       ))}
     </ul>
   );
-};
+}

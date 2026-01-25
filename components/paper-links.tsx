@@ -2,7 +2,7 @@
 
 import { Award as AwardIcon, Newspaper, Presentation as PresentationIcon } from 'lucide-react';
 import type { ResearchPaper } from '@/data/types';
-import { IconLink } from './IconLink';
+import { IconLink } from './icon-link';
 
 type PaperLinksProps = {
   onAwardsClickAction: () => void;
@@ -11,12 +11,12 @@ type PaperLinksProps = {
   paper: ResearchPaper;
 };
 
-export const PaperLinks: React.FC<PaperLinksProps> = ({
+export function PaperLinks({
   onAwardsClickAction,
   onMediaClickAction,
   onPresentationsClickAction,
   paper,
-}) => {
+}: PaperLinksProps) {
   const hasLinks = paper.links && paper.links.length > 0;
   const hasPresentations = paper.presentations && paper.presentations.length > 0;
   const hasAwards = paper.awards && paper.awards.length > 0;
@@ -72,4 +72,4 @@ export const PaperLinks: React.FC<PaperLinksProps> = ({
       )}
     </div>
   );
-};
+}

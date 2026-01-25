@@ -10,8 +10,10 @@
  * - Modify the research focus text in data/site.ts
  */
 
-import { Hero } from '@/components/Hero';
+import { Hero } from '@/components/hero';
 
-const Home: React.FC = () => <Hero />;
+function Home() {
+  return <Hero />;
+}
 
 export default Home;
