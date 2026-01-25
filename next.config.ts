@@ -19,7 +19,6 @@ const nextConfig: NextConfig = {
   experimental: {
     taint: true,
     turbopackFileSystemCacheForDev: true,
-    optimizeCss: true,
     cssChunking: true,
     inlineCss: true,
     optimizePackageImports: [
