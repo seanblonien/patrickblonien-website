@@ -191,6 +191,10 @@ export const papers: ResearchPaper[] = [
     ],
     presentations: [
       {
+        venue: 'Midwest Finance Association',
+        location: 'Chicago, IL'
+      },
+      {
         venue: '5th Conference on Financial Economics and Accounting',
         location: 'East Lansing, MI',
         isPresentedByCoauthor: true,
@@ -253,7 +257,7 @@ export const papers: ResearchPaper[] = [
     ],
     paperType: 'Working Papers',
     abstract:
-      'In a dynamic model of large traders who manage inventory risk, we show that a daily market closure coordinates liquidity. Some length of closure is welfare-improving relative to 24/7 trade, as the coordination of liquidity improves allocative efficiency, fully offsetting the costs of the closure. A long closure is optimal for traders in small markets, while traders in large markets would benefit from extending trading hours to near 24/7. A calibration of our model to several large equity exchanges that have proposed extending trading hours suggests that implementing such proposals would benefit traders.',
+      'In a dynamic model of large traders who manage inventory risk, we show that a daily market closure coordinates liquidity. Traders are marginally more willing to incur price impact at the end of the day in order to limit the expected cost of holding excess inventory overnight. Some length of closure is welfare-improving relative to 24/7 trade, as the benefits of liquidity coordination fully offset the costs of the closure. A long closure is optimal in markets with few traders or infrequent shocks, while traders in large and active markets would benefit from extending trading hours to near 24/7.',
     imageUrl: is247TradingBetterImg,
     imageDimensions: { width: 320, height: 240 },
     links: [
@@ -278,6 +282,14 @@ export const papers: ResearchPaper[] = [
       },
     ],
     presentations: [
+      {
+        venue: 'Finance Down Under Conference',
+        location: 'Melbourne, AU',
+      },
+      {
+        venue: 'NYSE Market Microstructure Conference',
+        location: 'New York, NY',
+      },
       {
         venue: 'Financial Research Association',
         location: 'Las Vegas, NV',
@@ -345,6 +357,10 @@ export const papers: ResearchPaper[] = [
       },
     ],
     presentations: [
+      {
+        venue: 'Midwest Finance Association',
+        location: 'Chicago, IL'
+      },
       {
         venue: 'Georgetown Politics in Finance Conference',
         location: 'Washington, DC',
