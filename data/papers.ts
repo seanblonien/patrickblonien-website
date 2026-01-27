@@ -192,7 +192,7 @@ export const papers: ResearchPaper[] = [
     presentations: [
       {
         venue: 'Midwest Finance Association',
-        location: 'Chicago, IL'
+        location: 'Chicago, IL',
       },
       {
         venue: '5th Conference on Financial Economics and Accounting',
@@ -359,7 +359,7 @@ export const papers: ResearchPaper[] = [
     presentations: [
       {
         venue: 'Midwest Finance Association',
-        location: 'Chicago, IL'
+        location: 'Chicago, IL',
       },
       {
         venue: 'Georgetown Politics in Finance Conference',
