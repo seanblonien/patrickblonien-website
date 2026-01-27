@@ -1,37 +1,83 @@
 # Patrick Blonien – Personal Academic Website
 
-A modern, fully static academic website built with Next.js 15, featuring a clean design optimized for finance professors and researchers. The site showcases research papers with collapsible abstracts, professional branding, and is fully responsive and accessible.
+A modern, fully static academic website built with Next.js 16, featuring a clean design optimized for finance professors and researchers. The site showcases research papers with collapsible abstracts, professional branding, and is fully responsive and accessible.
 
 ## Tech Stack Overview
 
-Built with **Next.js 15** (App Router) and **TypeScript** for type safety and modern React patterns. Styled with **Tailwind CSS v4** for a utility-first approach with CMU branding. The site is fully static (pre-rendered at build time) for maximum performance and SEO. Content is managed through simple TypeScript files in the `data/` directory—no CMS required. All pages are server components except for interactive elements like collapsible abstracts.
-
-## Getting Started
+Built with **Next.js 16** (App Router) and **TypeScript** for type safety and modern React patterns. Styled with **Tailwind CSS v4** for a utility-first approach with CMU branding. The site is fully static (pre-rendered at build time) for maximum performance and SEO. Content is managed through simple TypeScript files in the `data/` directory—no CMS required. All pages are server components except for interactive elements like collapsible abstracts.
 
 ### Prerequisites
-- Node.js 22+ and NPM
-- Git
 
-### Development
+- **Node.js 24+** (specified in `.nvmrc`)
+- **pnpm 10+** (package manager)
+- **Git**
+- **Bun** (for build scripts - auto-installed by pnpm)
+
+## Development Workflow
+
+### Development Commands
 
 ```bash
-# Clone the repository
-git clone https://github.com/seanblonien/patrickblonien-website.git
-cd patrickblonien-website
-
 # Install dependencies
-npm install
+pnpm install
 
-# Run development server
-npm run dev
+# Start development server with hot reload
+pnpm dev
+
+# Run both linting and type checking in parallel
+pnpm validate
+
+# Generate LLMs.txt files for AI context (required when data changes)
+pnpm gen
 ```
 
-Visit `http://localhost:3000` to see the site.
+### Build & Production
 
-## Making Changes/Contributing
+```bash
+# Build for production (static export)
+pnpm build
 
-This repository is designed to work seamlessly with AI coding agents like Augment, Cursor, or GitHub Copilot. Simply describe the changes you want in natural language—whether updating site content, adding research papers, or modifying styling—and the agent will handle the implementation. The codebase follows clear separation of concerns with content in `data/`, components in `components/`, and pages in `app/`, making it easy for agents to understand and modify the right files.
+# Build and serve locally
+pnpm prod
 
-## Deployment
+# Start production server (after build)
+pnpm start
 
-The site is deployed on Vercel. To deploy your own version, simply connect your GitHub repository to Vercel and enable automatic deployments on push to main. Vercel will handle building and deploying the static site for you.
+# Analyze bundle size
+pnpm analyze
+```
+
+## Content Management
+
+### Adding Research Papers
+
+Edit `data/papers.ts` and add new papers following the existing structure:
+
+```typescript
+{
+  id: "paper-slug",
+  title: "Paper Title",
+  authors: [
+    { name: "Patrick Blonien", isPatrick: true },
+    { name: "Coauthor Name", url: "https://example.com" }
+  ],
+  paperType: "Working Papers" | "Publications",
+  venue: "Journal/Conference Name",
+  date: "2025",
+  abstract: "Paper abstract...",
+  imageUrl: import("@/public/paper-image.webp"),
+  links: [
+    { type: "paper", url: "/paper.pdf" },
+    { type: "code", url: "https://github.com/..." }
+  ]
+}
+```
+
+### Site Information
+
+Update `data/site.ts` to modify:
+- Personal details (name, title, institution)
+- Contact information
+- Social media links
+- Research focus description
+- CV download link
