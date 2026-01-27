@@ -27,6 +27,12 @@ const nextConfig: NextConfig = {
       '@vercel/speed-insights',
     ],
   },
+  turbopack: {
+    resolveAlias: {
+      '../build/polyfills/polyfill-module': './scripts/modern-polyfill.js',
+      'next/dist/build/polyfills/polyfill-module': './scripts/modern-polyfill.js',
+    },
+  },
 };
 
 export default nextConfig;
